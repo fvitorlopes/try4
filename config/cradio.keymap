@@ -13,6 +13,11 @@
 #define SYMBOLS_L   1
 #define NAVI_L      2
 #define NUMBERS_L   3
+#define MOUSE   3
+#define NAVIGATION   3
+#define NUMBERS   3
+
+
 
 &mt {
     //  flavor = "tap-preferred";
@@ -39,14 +44,14 @@
         keymap {
                 compatible = "zmk,keymap";
                 
-       		default_layer {
-		bindings = <
-		&hm ESC Q 	&kp W   &kp F   &kp P   	&kp B 						        &kp J   &kp L   	&kp U       	&kp Y			&kp BSPC
-		&hm TAB A	&kp S   &kp D   &hm LCMD F  &kp G 			        	        &kp M   &hm LCMD N  &kp E       	&kp I   		&hm ENTER O
-		&kp Z       &kp X   &kp C   &kp D   	&kp V				                &kp K   &kp H   	&hm SLASH CMMA	&hm EXCL DOT 	&hm EQUAL SEMI
-          				            &kp LSHFT 	&kp LCTL  				        	&to SYMBOLS_L   	&kp SPC
-		>;
-		};
+	 Base_layer {
+ bindings = <
+ &mt RS(Q) Q &mt RS(W) W &mt RS(E) E &mt RS(R) R &mt RS(T) T &mt RS(Y) Y &mt RS(U) U &mt RS(I) I &mt RS(O) O &mt RS(P) P 
+ &mt RS(A) A &mt RS(S) S &mt RS(D) D &mt RS(X) X &mt RS(G) G &mt RS(H) H &mt RS(J) J &mt RS(K) K &mt RS(L) L &lt SYMBOLS RETURN 
+ &mt RS(Z) Z &mt RS(X) X &mt RS(C) C &mt RS(V) V &mt RS(B) B &mt RS(N) N &mt RS(M) M &td3 &td2 &kp BACKSPACE 
+ &sk LEFT_CONTROL &lt NUMBERS SPACE &lt NAVIGATION SPACE &lt MOUSE BACKSPACE
+ >;
+ };
 
        		symbols_layer {
 		bindings = <
