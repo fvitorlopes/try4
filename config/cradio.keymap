@@ -9,11 +9,16 @@
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/bt.h>
 
-#define DEFAULT_L   0
+
+#define BASE 0
+#define NAVIGATION 2
+#define MOUSE 1
+#define SYMBOLS 3
+#define NUMBERS 4
 
 &mt {
-    //  flavor = "tap-preferred";
-   // tapping_term_ms = <200>;
+ tapping-term-ms = <600>;
+ flavor = "tap-preferred";
 };
 
 / { 
@@ -22,17 +27,14 @@
     combos {
     };
 
-        keymap {
-                compatible = "zmk,keymap";
-                
-       		default_layer {
-		bindings = <
-		&kp W 	&kp W   &kp F   &kp P  &kp B 						&kp J   &kp L  &kp U   &kp Y   &kp W
-		&kp W	&kp S   &kp D   &kp W  &kp G 			        	        &kp M   &kp W  &kp E   &kp I   &kp W
-		&kp Z   &kp X   &kp C   &kp D  &kp V				                &kp K   &kp H  &kp W   &kp W   &kp W
-                &kp LSHFT  &kp LCTL  								&kp W   &kp W
-		>;
-		};
+	 Base_layer {
+	 bindings = <
+		 &mt RS(Q) Q &mt RS(W) W &mt RS(E) E &mt RS(R) R &mt RS(T) T &mt RS(Y) Y &mt RS(U) U &mt RS(I) I &mt RS(O) O &mt RS(P) P 
+		 &mt RS(A) A &mt RS(S) S &mt RS(D) D &mt RS(X) X &mt RS(G) G &mt RS(H) H &mt RS(J) J &mt RS(K) K &mt RS(L) L &lt SYMBOLS RETURN 
+		 &mt RS(Z) Z &mt RS(X) X &mt RS(C) C &mt RS(V) V &mt RS(B) B &mt RS(N) N &mt RS(M) M &td3 &td2 &kp BACKSPACE 
+		 &mt RS(A) &mt RS(A)  &mt RS(A) &mt RS(A)
+	 >;
+	 };
 
         
 	};
