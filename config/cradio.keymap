@@ -13,9 +13,9 @@
 
 #define BASE 0
 #define NAVIGATION 2
-#define MOUSE 1
-#define SYMBOLS 1
-#define NUMBERS 2
+#define MOUSE 3
+#define SYMBOLS 4
+#define NUMBERS 5
 
 &mt {
 	tapping-term-ms = <500>;
@@ -90,6 +90,45 @@
 			 &kp LEFT_ALT &kp LEFT_GUI &none &none 
 			 >;
 			 };
+
+	
+			 /* NAVIGATION AND MODIFIERS
+			 ╭──────────────────────────────────╮ ╭──────────────────────────────────╮
+			 │ ' " \ Blash │ │ │ ¨ < > ( ) │
+			 │ ~ ? ^ . \ │ │ ({ }) _- =+ │
+			 │ . . . . . │ │ . < > < > │
+			 ╰────────────────╮ . . │ │ . . ╭────────────────╯
+			 ╰─────────────────╯ ╰─────────────────╯ */
+			 Symbols_layer {
+			 bindings = <
+			 &kp SINGLE_QUOTE &kp DOUBLE_QUOTES &kp SLASH &kp BACKSLASH &kp PIPE &kp CARET &kp LT &kp GT &kp LEFT_PARENTHESIS &kp RIGHT_PARENTHESIS 
+			 &kp TILDE &kp RA(W) &kp GRAVE &none &kp SLASH &kp PIPE &td0 &td1 &mt UNDER MINUS &mt EQUAL PLUS 
+			 &none &none &none &none &kp BACKSLASH &none &kp LT &kp GT &kp LT &kp GT 
+			 &none &none &none &none 
+			 >;
+			 };
+
+
+
+
+
+
+			 /* FUNCTION, SIMBOLS AND NUMBERS
+			 ╭──────────────────────────────────╮ ╭──────────────────────────────────╮
+			 │ 1! 2@ 3# 4$ 5% │ │ 6¨ 7& 8* 9( 0) │
+			 │ ~ ? ^ . \ │ │ CAPS . . F1 F12 │
+			 │ F2 F3 F4 F5 F6 │ │ F7 F8 F9 F10 F11 │
+			 ╰────────────────╮ . . │ │ . . ╭────────────────╯
+			 ╰─────────────────╯ ╰─────────────────╯ */
+			 Numbers_layer {
+			 bindings = <
+			 &mt EXCLAMATION NUMBER_1 &mt AT_SIGN NUMBER_2 &mt HASH NUMBER_3 &mt DOLLAR NUMBER_4 &mt PERCENT NUMBER_5 &mt CARET NUMBER_6 &mt AMPERSAND NUMBER_7 &mt ASTERISK NUMBER_8 &mt LEFT_PARENTHESIS NUMBER_9 &mt RIGHT_PARENTHESIS NUMBER_0 
+			 &kp TILDE &kp RA(W) &kp GRAVE &none &kp SLASH &kp CAPS &none &none &kp F1 &kp F12 
+			 &kp F2 &kp F3 &kp RA(F4) &kp LC(F5) &kp F6 &kp F7 &kp F8 &kp F9 &kp F10 &kp F11	
+			 &none &none &none &none 
+			 >;
+			 };
+
 
         
 	};
