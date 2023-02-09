@@ -13,7 +13,7 @@
 
 #define BASE 0
 #define NAVIGATION 0
-#define MOUSE 0
+#define MOUSE 2
 #define SYMBOLS 0
 #define NUMBERS 0
 
@@ -33,12 +33,21 @@
                 
        		base_layer {
 		bindings = <
-		&mt RS(Q) Q &mt RS(W) W &mt RS(E) E &mt RS(R) R &mt RS(T) T  			&mt RS(Y) Y &mt RS(U) U &mt RS(I) I &mt RS(O) O &mt RS(P) P 
-		&mt RS(A) A &mt RS(S) S &mt RS(D) D &mt RS(F) F &mt RS(G) G  			&mt RS(H) H &mt RS(J) J &mt RS(K) K &mt RS(L) L &lt SYMBOLS RETURN 
-		&mt RS(Z) Z &mt RS(X) X &mt RS(C) C &mt RS(V) V &mt RS(B) B			&mt RS(N) N &mt RS(M) M &mt RS(M) M &mt RS(M) M &mt RS(M) M 
-                &kp LSHFT  &kp LCTL  								&kp W   &kp W
-		>;
+			&mt RS(Q) Q &mt RS(W) W &mt RS(E) E &mt RS(R) R &mt RS(T) T  			&mt RS(Y) Y &mt RS(U) U &mt RS(I) I &mt RS(O) O &mt RS(P) P 
+			&mt RS(A) A &mt RS(S) S &mt RS(D) D &mt RS(F) F &mt RS(G) G  			&mt RS(H) H &mt RS(J) J &mt RS(K) K &mt RS(L) L &lt SYMBOLS RETURN 
+			&mt RS(Z) Z &mt RS(X) X &mt RS(C) C &mt RS(V) V &mt RS(B) B			&mt RS(N) N &mt RS(M) M &mt RS(M) M &mt RS(M) M &mt RS(M) M 
+			&lt MOUSE BACKSPACE  &kp LCTL  								&kp W   &kp W
+			>;
 		};
+
+	         Mouse_layer {
+		 bindings = <
+			 &none &mkp LCLK &mmv MOVE_UP &mkp RCLK &none &kp K_VOLUME_UP &mwh SCROLL_UP &mwh SCROLL_DOWN &mwh SCROLL_DOWN &trans 
+			 &trans &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &none &kp K_VOLUME_DOWN &kp LC(F13) &kp LC(F14) &kp LC(F15) &trans
+			 &trans &none &kp LC(LEFT) &kp LC(RIGHT) &none &kp K_MUTE &kp LC(PAGE_UP) &kp LC(PAGE_DOWN) &none &trans 
+			 &mkp LCLK &mkp RCLK &none &none 
+			 >;
+		 };
 
         
 	};
