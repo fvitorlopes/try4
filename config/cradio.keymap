@@ -17,10 +17,19 @@
 #define SYMBOLS 3
 #define NUMBERS 4
 
+&mmv {
+	time-to-max-speed-ms = <400>;
+};
+
+&mwh {
+	acceleration-exponent=<1>;
+};
+
 &mt {
-	tapping-term-ms = <500>;
+	tapping-term-ms = <600>;
 	flavor = "tap-preferred";
 };
+
 
 / { 
 	
