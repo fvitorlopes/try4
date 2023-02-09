@@ -11,239 +11,157 @@
 #define NUMBERS 4
  
 &mmv {
- time-to-max-speed-ms = <400>;
+	time-to-max-speed-ms = <400>;
 };
 
 &mwh {
- acceleration-exponent=<1>;
+	acceleration-exponent=<1>;
 };
 
 &mt {
- tapping-term-ms = <600>;
- flavor = "tap-preferred";
+	tapping-term-ms = <600>;
+	flavor = "tap-preferred";
 };
 
 / {
 
- /* KEY POSITIONS
-
- ╭────────────────────╮ ╭────────────────────╮
- │ 0 1 2 3 4 │ │ 5 6 7 8 9 │
- │ 10 11 12 13 14 │ │ 15 16 17 18 19 │
- │ 20 21 22 23 24 │ │ 25 26 27 28 29 │
- ╰───────────╮ 30 31 │ │ 32 33 ╭───────────╯
- ╰────────╯ ╰────────╯ */
-
-
+combos {
+	compatible = "zmk,combos";
+	
+	combo_esc {
+		timeout-ms = <27>;
+		key-positions = <1 2>;
+		bindings = <&kp ESC>;
+	};
 
 
- /* ================== COMBOS =========================*/
-
- combos {
- compatible = "zmk,combos";
- 
- /* 
- ╭────────────────────╮ ╭────────────────────╮
- │ . [ESC] │ │ . [BKS] . . │
- │ . [TAB][WIN] . │ │ . [ENT] . . │
- │ [SHIFT] . . . │ │ . . . . . │
- ╰───────────╮ . . │ │ . . ╭───────────╯
- ╰────────╯ ╰────────╯ */
- 
- 
- combo_esc {
- timeout-ms = <27>;
- key-positions = <1 2>;
- bindings = <&kp ESC>;
- };
+	combo_tab {
+		timeout-ms = <27>;
+		key-positions = <11 12>;
+		bindings = <&kp TAB>;
+	};
 
 
- combo_tab {
- timeout-ms = <27>;
- key-positions = <11 12>;
- bindings = <&kp TAB>;
- };
+	combo_enter {
+		timeout-ms = <27>;
+		key-positions = <16 17>;
+		bindings = <&kp ENTER>;
+	};
+
+	combo_backspace {
+		timeout-ms = <27>;
+		key-positions = <5 6>;
+		bindings = <&kp BSPC>;
+	};
 
 
- combo_enter {
- timeout-ms = <27>;
- key-positions = <16 17>;
- bindings = <&kp ENTER>;
- };
-
- combo_backspace {
- timeout-ms = <27>;
- key-positions = <5 6>;
- bindings = <&kp BSPC>;
- };
-
-
- combo_shift {
- timeout-ms = <27>;
- key-positions = <5 6>;
- bindings = <&kp LSHIFT>;
- };
- 
- combo_gui {
- timeout-ms = <27>;
- key-positions = <5 6>;
- bindings = <&kp LGUI>;
- };
+	combo_shift {
+		timeout-ms = <27>;
+		key-positions = <5 6>;
+		bindings = <&kp LSHIFT>;
+	};
+	
+	combo_gui {
+		timeout-ms = <27>;
+		key-positions = <5 6>;
+		bindings = <&kp LGUI>;
+	};
 
  };
 
 
-
- /* ================== TAP DANCE ===========================*/
 
 
  behaviors {
 
- td0: td_open {
- compatible = "zmk,behavior-tap-dance";
- label = "TD_OPEN";
- #binding-cells = <0>;
- tapping-term-ms = <200>;
- bindings = <&kp LEFT_BRACE>, <&kp LEFT_PARENTHESIS>, <&kp LEFT_BRACKET>, <&kp LT>;
+	td0: td_open {
+		compatible = "zmk,behavior-tap-dance";
+		label = "TD_OPEN";
+		#binding-cells = <0>;
+		tapping-term-ms = <200>;
+		bindings = <&kp LEFT_BRACE>, <&kp LEFT_PARENTHESIS>, <&kp LEFT_BRACKET>, <&kp LT>;
+	};
+
+	td1: td_close {
+		compatible = "zmk,behavior-tap-dance";
+		label = "TD_CLOSE";
+		#binding-cells = <0>;
+		tapping-term-ms = <200>;
+		bindings = <&kp RIGHT_BRACE>, <&kp RIGHT_PARENTHESIS>, <&kp RIGHT_BRACKET>, <&kp GT>;
+	};
+
+	td2: dot_dot {
+		compatible = "zmk,behavior-tap-dance";
+		label = "DOT_DOT";
+		#binding-cells = <0>;
+		tapping-term-ms = <200>;
+		bindings = <&kp PERIOD>, <&kp COLON>;
+	};
+
+
+	td3: comma_comma {
+		compatible = "zmk,behavior-tap-dance";
+		label = "DOT_DOT";
+		#binding-cells = <0>;
+		tapping-term-ms = <200>;
+		bindings = <&kp COMMA>, <&kp SEMICOLON>;
+	};
+
  };
 
- td1: td_close {
- compatible = "zmk,behavior-tap-dance";
- label = "TD_CLOSE";
- #binding-cells = <0>;
- tapping-term-ms = <200>;
- bindings = <&kp RIGHT_BRACE>, <&kp RIGHT_PARENTHESIS>, <&kp RIGHT_BRACKET>, <&kp GT>;
- };
-
- td2: dot_dot {
- compatible = "zmk,behavior-tap-dance";
- label = "DOT_DOT";
- #binding-cells = <0>;
- tapping-term-ms = <200>;
- bindings = <&kp PERIOD>, <&kp COLON>;
- };
-
-
- td3: comma_comma {
- compatible = "zmk,behavior-tap-dance";
- label = "DOT_DOT";
- #binding-cells = <0>;
- tapping-term-ms = <200>;
- bindings = <&kp COMMA>, <&kp SEMICOLON>;
- };
-
- };
-
-
-
-
-/* ================== KEYMAP ==========================*/
-
-
-
+ 
  keymap {
- compatible = "zmk,keymap";
+	compatible = "zmk,keymap";
 
- /* BASE 
- base layer contains autoshift on alpha chars
- ╭────────────────────╮ ╭────────────────────╮
- │ Q W E R T │ │ Y U I O P │
- │ A S D F G │ │ H J K L RET│
- │ Z X C V B │ │ N M , . BS │
- ╰───────────╮ CTL SP │ │ NV MOU╭───────────╯
- ╰────────╯ ╰────────╯ */
 
- Base_layer {
- bindings = <
- &mt RS(Q) Q &mt RS(W) W &mt RS(E) E &mt RS(R) R &mt RS(T) T &mt RS(Y) Y &mt RS(U) U &mt RS(I) I &mt RS(O) O &mt RS(P) P 
- &mt RS(A) A &mt RS(S) S &mt RS(D) D &mt RS(X) X &mt RS(G) G &mt RS(H) H &mt RS(J) J &mt RS(K) K &mt RS(L) L &lt SYMBOLS RETURN 
- &mt RS(Z) Z &mt RS(X) X &mt RS(C) C &mt RS(V) V &mt RS(B) B &mt RS(N) N &mt RS(M) M &td3 &td2 &kp BACKSPACE 
- &sk LEFT_CONTROL &lt NUMBERS SPACE &lt NAVIGATION SPACE &lt MOUSE BACKSPACE
- >;
- };
+	Base_layer {
+	bindings = <
+	&mt RS(Q) Q &mt RS(W) W &mt RS(E) E &mt RS(R) R &mt RS(T) T &mt RS(Y) Y &mt RS(U) U &mt RS(I) I &mt RS(O) O &mt RS(P) P 
+	&mt RS(A) A &mt RS(S) S &mt RS(D) D &mt RS(X) X &mt RS(G) G &mt RS(H) H &mt RS(J) J &mt RS(K) K &mt RS(L) L &lt SYMBOLS RETURN 
+	&mt RS(Z) Z &mt RS(X) X &mt RS(C) C &mt RS(V) V &mt RS(B) B &mt RS(N) N &mt RS(M) M &td3 &td2 &kp BACKSPACE 
+	&sk LEFT_CONTROL &lt NUMBERS SPACE &lt NAVIGATION SPACE &lt MOUSE BACKSPACE
+	>;
+	};
 
 
 
+	Mouse_layer {
+	bindings = <
+	&none &mkp LCLK &mmv MOVE_UP &mkp RCLK &none &kp K_VOLUME_UP &mwh SCROLL_UP &mwh SCROLL_DOWN &mwh SCROLL_DOWN &trans 
+	&trans &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &none &kp K_VOLUME_DOWN &kp LC(F13) &kp LC(F14) &kp LC(F15) &trans
+	&trans &none &kp LC(LEFT) &kp LC(RIGHT) &none &kp K_MUTE &kp LC(PAGE_UP) &kp LC(PAGE_DOWN) &none &trans 
+	&mkp LCLK &mkp RCLK &none &none 
+	>;
+	};
 
 
-
- /* MOUSE AND MEDIA CONTROL
- ╭──────────────────────────────────╮ ╭──────────────────────────────────╮
- │ . LFTCL UP RGTCL . │ │ VOLU SCRU SCRD SCRD . │
- │ . LEFT DOWN RIGHT . │ │ VOLD MO1 MO2 MO3 . │
- │ . . PAGEB PAGEF . │ │ MUTE PAGU PAGD . . │
- ╰────────────────╮ LFTCL RGTCL │ │ . . ╭────────────────╯
- ╰─────────────────╯ ╰─────────────────╯ */
- Mouse_layer {
- bindings = <
- &none &mkp LCLK &mmv MOVE_UP &mkp RCLK &none &kp K_VOLUME_UP &mwh SCROLL_UP &mwh SCROLL_DOWN &mwh SCROLL_DOWN &trans 
- &trans &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &none &kp K_VOLUME_DOWN &kp LC(F13) &kp LC(F14) &kp LC(F15) &trans
- &trans &none &kp LC(LEFT) &kp LC(RIGHT) &none &kp K_MUTE &kp LC(PAGE_UP) &kp LC(PAGE_DOWN) &none &trans 
- &mkp LCLK &mkp RCLK &none &none 
- >;
- };
+	Navigation_layer {
+	bindings = <
+	&trans &kp PAGE_DOWN &kp UP &kp PAGE_UP &none &none &kp HOME &kp END &kp END &none
+	&kp TAB &kp LEFT &kp DOWN &kp RIGHT &none &none &sk LEFT_SHIFT &sk LEFT_CONTROL &sk LALT &sk LGUI
+	&kp LEFT_SHIFT &none &none &none &none &kp DEL &kp INSERT &none &none &none 
+	&kp LEFT_ALT &kp LEFT_GUI &none &none 
+	>;
+	};
 
 
+	Symbols_layer {
+	bindings = <
+	&kp SINGLE_QUOTE &kp DOUBLE_QUOTES &kp SLASH &kp BACKSLASH &kp PIPE &kp CARET &kp LT &kp GT &kp LEFT_PARENTHESIS &kp RIGHT_PARENTHESIS 
+	&kp TILDE &kp RA(W) &kp GRAVE &none &kp SLASH &kp PIPE &td0 &td1 &mt UNDER MINUS &mt EQUAL PLUS 
+	&none &none &none &none &kp BACKSLASH &none &kp LT &kp GT &kp LT &kp GT 
+	&none &none &none &none 
+	>;
+	};
 
 
-
-
- /* NAVIGATION AND MODIFIERS
- ╭──────────────────────────────────╮ ╭──────────────────────────────────╮
- │ . PAGDW UP PAGUP . │ │ . HOME END END . │
- │ TAB LEFT DOWN RIGHT . │ │ . LSHFT LCTRL LALT LGUI │
- │ LSHFT . . . . │ │ DEL INST . . . │
- ╰────────────────╮ LALT LGUI │ │ . . ╭────────────────╯
- ╰─────────────────╯ ╰─────────────────╯ */
- Navigation_layer {
- bindings = <
- &trans &kp PAGE_DOWN &kp UP &kp PAGE_UP &none &none &kp HOME &kp END &kp END &none
- &kp TAB &kp LEFT &kp DOWN &kp RIGHT &none &none &sk LEFT_SHIFT &sk LEFT_CONTROL &sk LALT &sk LGUI
- &kp LEFT_SHIFT &none &none &none &none &kp DEL &kp INSERT &none &none &none 
- &kp LEFT_ALT &kp LEFT_GUI &none &none 
- >;
- };
-
-
-
-
-
-
- /* NAVIGATION AND MODIFIERS
- ╭──────────────────────────────────╮ ╭──────────────────────────────────╮
- │ ' " \ Blash │ │ │ ¨ < > ( ) │
- │ ~ ? ^ . \ │ │ ({ }) _- =+ │
- │ . . . . . │ │ . < > < > │
- ╰────────────────╮ . . │ │ . . ╭────────────────╯
- ╰─────────────────╯ ╰─────────────────╯ */
- Symbols_layer {
- bindings = <
- &kp SINGLE_QUOTE &kp DOUBLE_QUOTES &kp SLASH &kp BACKSLASH &kp PIPE &kp CARET &kp LT &kp GT &kp LEFT_PARENTHESIS &kp RIGHT_PARENTHESIS 
- &kp TILDE &kp RA(W) &kp GRAVE &none &kp SLASH &kp PIPE &td0 &td1 &mt UNDER MINUS &mt EQUAL PLUS 
- &none &none &none &none &kp BACKSLASH &none &kp LT &kp GT &kp LT &kp GT 
- &none &none &none &none 
- >;
- };
-
-
-
-
-
-
- /* FUNCTION, SIMBOLS AND NUMBERS
- ╭──────────────────────────────────╮ ╭──────────────────────────────────╮
- │ 1! 2@ 3# 4$ 5% │ │ 6¨ 7& 8* 9( 0) │
- │ ~ ? ^ . \ │ │ CAPS . . F1 F12 │
- │ F2 F3 F4 F5 F6 │ │ F7 F8 F9 F10 F11 │
- ╰────────────────╮ . . │ │ . . ╭────────────────╯
- ╰─────────────────╯ ╰─────────────────╯ */
- Numbers_layer {
- bindings = <
- &mt EXCLAMATION NUMBER_1 &mt AT_SIGN NUMBER_2 &mt HASH NUMBER_3 &mt DOLLAR NUMBER_4 &mt PERCENT NUMBER_5 &mt CARET NUMBER_6 &mt AMPERSAND NUMBER_7 &mt ASTERISK NUMBER_8 &mt LEFT_PARENTHESIS NUMBER_9 &mt RIGHT_PARENTHESIS NUMBER_0 
- &kp TILDE &kp RA(W) &kp GRAVE &none &kp SLASH &kp CAPS &none &none &kp F1 &kp F12 
- &kp F2 &kp F3 &kp RA(F4) &kp LC(F5) &kp F6 &kp F7 &kp F8 &kp F9 &kp F10 &kp F11	
- &none &none &none &none 
- >;
- };
+	Numbers_layer {
+	bindings = <
+	&mt EXCLAMATION NUMBER_1 &mt AT_SIGN NUMBER_2 &mt HASH NUMBER_3 &mt DOLLAR NUMBER_4 &mt PERCENT NUMBER_5 &mt CARET NUMBER_6 &mt AMPERSAND NUMBER_7 &mt ASTERISK NUMBER_8 &mt LEFT_PARENTHESIS NUMBER_9 &mt RIGHT_PARENTHESIS NUMBER_0 
+	&kp TILDE &kp RA(W) &kp GRAVE &none &kp SLASH &kp CAPS &none &none &kp F1 &kp F12 
+	&kp F2 &kp F3 &kp RA(F4) &kp LC(F5) &kp F6 &kp F7 &kp F8 &kp F9 &kp F10 &kp F11	
+	&none &none &none &none 
+	>;
+	};
  };
 };
