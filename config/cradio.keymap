@@ -33,7 +33,7 @@
                 
        		base_layer {
 		bindings = <
-		&kp W 	&kp W   &kp F   &kp P  &kp B 						&kp J   &kp L  &kp U   &kp Y   &kp W
+		&mt RS(Q) Q &mt RS(W) W &mt RS(E) E &mt RS(R) R &mt RS(T) T  						&kp J   &kp L  &kp U   &kp Y   &kp W
 		&kp W	&kp S   &kp D   &kp W  &kp G 			        	        &kp M   &kp W  &kp E   &kp I   &kp W
 		&kp Z   &kp X   &kp C   &kp D  &kp V				                &kp K   &kp H  &kp W   &kp W   &kp W
                 &kp LSHFT  &kp LCTL  								&kp W   &kp W
