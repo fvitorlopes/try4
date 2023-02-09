@@ -9,7 +9,11 @@
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/bt.h>
 
-#define DEFAULT_L   0
+#define BASE 0
+#define NAVIGATION 2
+#define MOUSE 1
+#define SYMBOLS 3
+#define NUMBERS 4
 
 &mt {
     //  flavor = "tap-preferred";
