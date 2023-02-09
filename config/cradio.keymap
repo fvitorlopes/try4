@@ -29,7 +29,7 @@
         keymap {
                 compatible = "zmk,keymap";
                 
-       		default_layer {
+       		base_layer {
 		bindings = <
 		&kp W 	&kp W   &kp F   &kp P  &kp B 						&kp J   &kp L  &kp U   &kp Y   &kp W
 		&kp W	&kp S   &kp D   &kp W  &kp G 			        	        &kp M   &kp W  &kp E   &kp I   &kp W
