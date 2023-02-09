@@ -12,8 +12,8 @@
 
 
 #define BASE 0
+#define MOUSE 1
 #define NAVIGATION 0
-#define MOUSE 2
 #define SYMBOLS 0
 #define NUMBERS 0
 
