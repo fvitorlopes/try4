@@ -75,11 +75,6 @@
  };
 
 
- combo_shift {
- timeout-ms = <27>;
- key-positions = <5 6>;
- bindings = <&kp LSHIFT>;
- };
  
  combo_gui {
  timeout-ms = <27>;
@@ -90,7 +85,42 @@
  };
 
 
+behaviors {
 
+ td0: td_open {
+ compatible = "zmk,behavior-tap-dance";
+ label = "TD_OPEN";
+ #binding-cells = <0>;
+ tapping-term-ms = <200>;
+ bindings = <&kp LEFT_BRACE>, <&kp LEFT_PARENTHESIS>, <&kp LEFT_BRACKET>, <&kp LT>;
+ };
+
+ td1: td_close {
+ compatible = "zmk,behavior-tap-dance";
+ label = "TD_CLOSE";
+ #binding-cells = <0>;
+ tapping-term-ms = <200>;
+ bindings = <&kp RIGHT_BRACE>, <&kp RIGHT_PARENTHESIS>, <&kp RIGHT_BRACKET>, <&kp GT>;
+ };
+
+ td2: dot_dot {
+ compatible = "zmk,behavior-tap-dance";
+ label = "DOT_DOT";
+ #binding-cells = <0>;
+ tapping-term-ms = <200>;
+ bindings = <&kp PERIOD>, <&kp COLON>;
+ };
+
+
+ td3: comma_comma {
+ compatible = "zmk,behavior-tap-dance";
+ label = "DOT_DOT";
+ #binding-cells = <0>;
+ tapping-term-ms = <200>;
+ bindings = <&kp COMMA>, <&kp SEMICOLON>;
+ };
+
+ };
 
         keymap {
                 compatible = "zmk,keymap";
