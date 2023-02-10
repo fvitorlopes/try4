@@ -138,7 +138,7 @@ behaviors {
 			 bindings = <
 			 &mt RS(Q) Q &mt RS(W) W &mt RS(E) E &mt RS(R) R &mt RS(T) T &mt RS(Y) Y &mt RS(U) U &mt RS(I) I &mt RS(O) O &mt RS(P) P 
 			 &mt RS(A) NUMBER_4 &mt RS(S) S &mt RS(D) D &mt RS(X) X &mt RS(G) G &mt RS(H) H &mt RS(J) J &mt RS(K) K &mt RS(L) L &lt SYMBOLS RETURN 
-			 &mt RS(Z) Z &mt RS(X) X &mt RS(C) C &mt RS(V) V &mt RS(B) B &mt RS(N) N &mt RS(M) M &mt RS(M) M &mt RS(M) M &kp BACKSPACE 
+			 &mt RS(Z) Z &mt RS(X) X &mt RS(C) C &mt RS(V) V &mt RS(B) B &mt RS(N) N &mt RS(M) M &td3 &td2  &kp BACKSPACE 
 			 &sk LEFT_CONTROL &lt NUMBERS SPACE &lt NAVIGATION SPACE &lt MOUSE BACKSPACE
 			 >;
 			 };
@@ -217,7 +217,7 @@ behaviors {
 			 Numbers_layer {
 			 bindings = <
 			 &mt EXCLAMATION NUMBER_1 &mt AT_SIGN NUMBER_2 &mt HASH NUMBER_3 &mt DOLLAR NUMBER_4 &mt PERCENT NUMBER_5 &mt CARET NUMBER_6 &mt AMPERSAND NUMBER_7 &mt ASTERISK NUMBER_8 &mt LEFT_PARENTHESIS NUMBER_9 &mt RIGHT_PARENTHESIS NUMBER_0 
-			 &kp TILDE &kp RA(W) &kp GRAVE &none &kp SLASH &kp CAPS &none &none &kp F1 &kp F12 
+			 &kp TILDE &kp RA(W) &kp GRAVE &none &kp SLASH &kp CAPS &td0 &td1 &kp F1 &kp F12 
 			 &kp F2 &kp F3 &kp RA(F4) &kp LC(F5) &kp F6 &kp F7 &kp F8 &kp F9 &kp F10 &kp F11	
 			 &none &none &none &none 
 			 >;
