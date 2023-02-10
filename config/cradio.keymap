@@ -83,7 +83,7 @@
  
  combo_gui {
  timeout-ms = <27>;
- key-positions = <5 6>;
+ key-positions = <12 13>;
  bindings = <&kp LGUI>;
  };
 
@@ -107,7 +107,7 @@
 			 Base_layer {
 			 bindings = <
 			 &mt RS(Q) Q &mt RS(W) W &mt RS(E) E &mt RS(R) R &mt RS(T) T &mt RS(Y) Y &mt RS(U) U &mt RS(I) I &mt RS(O) O &mt RS(P) P 
-			 &mt RS(A) NUMBER_2 &mt RS(S) S &mt RS(D) D &mt RS(X) X &mt RS(G) G &mt RS(H) H &mt RS(J) J &mt RS(K) K &mt RS(L) L &lt SYMBOLS RETURN 
+			 &mt RS(A) NUMBER_3 &mt RS(S) S &mt RS(D) D &mt RS(X) X &mt RS(G) G &mt RS(H) H &mt RS(J) J &mt RS(K) K &mt RS(L) L &lt SYMBOLS RETURN 
 			 &mt RS(Z) Z &mt RS(X) X &mt RS(C) C &mt RS(V) V &mt RS(B) B &mt RS(N) N &mt RS(M) M &mt RS(M) M &mt RS(M) M &kp BACKSPACE 
 			 &sk LEFT_CONTROL &lt NUMBERS SPACE &lt NAVIGATION SPACE &lt MOUSE BACKSPACE
 			 >;
