@@ -167,14 +167,16 @@ behaviors {
 			 };
 
 	
-			 /* symbols AND MODIFIERS
+			 /*                         SYMBOLS AND MODIFIERS
 			 ╭──────────────────────────────────╮ ╭──────────────────────────────────╮
-			 │ ' " \ Blash │ │ │ ¨ < > ( ) │
-			 │ ~ ? ^ . \ │ │ ({ }) _- =+ │
-			 │ . . . . . │ │ . < > < > │
-			 ╰────────────────╮ . . │ │ . . ╭────────────────╯
-			 ╰─────────────────╯ ╰─────────────────╯ */
-			 Symbols_layer {
+			 │     '     "     \     Blash │    │ │     ¨     <     >     (     )    │
+			 │     ~     ?     ^     .     \    │ │     ({    })    _-    =+    .    │
+			 │     .     .     .     .     .    │ │     .     .     .     .     .    │ 
+			 ╰────────────────╮      .     .  │ │ .     .     .     ╭────────────────╯
+			                  ╰─────────────────╯ ╰─────────────────╯ 
+			*/
+			
+			Symbols_layer {
 			 bindings = <
 			 &kp SINGLE_QUOTE &kp DOUBLE_QUOTES &kp SLASH &kp BACKSLASH &kp PIPE &kp CARET &kp LT &kp GT &kp LEFT_PARENTHESIS &kp RIGHT_PARENTHESIS 
 			 &kp TILDE &kp RA(W) &kp GRAVE &none &kp SLASH &kp PIPE &kp RA(W) &mt UNDER MINUS &mt EQUAL PLUS 
