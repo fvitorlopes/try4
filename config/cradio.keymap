@@ -148,13 +148,16 @@ behaviors {
 			   >;
 			 };
 
-			 /* NAVIGATION AND MODIFIERS
-			 ╭──────────────────────────────────╮ ╭──────────────────────────────────╮
-			 │ . PAGDW UP PAGUP . │ │ . HOME END END . │
-			 │ TAB LEFT DOWN RIGHT . │ │ . LSHFT LCTRL LALT LGUI │
-			 │ LSHFT . . . . │ │ DEL INST . . . │
-			 ╰────────────────╮ LALT LGUI │ │ . . ╭────────────────╯
-			 ╰─────────────────╯ ╰─────────────────╯ */
+			 /*                         NAVIGATION AND MODIFIERS
+			 ╭─────────────────────────────────────╮ ╭─────────────────────────────────────╮
+			 │     .     PAGDW  UP     PAGUP .     │ │     .     HOME     END   END  .     │
+			 │     TAB   LEFT   DOWN   RIGHT .     │ │     .     LSHFT    LCTRL LALT LGUI  │
+			 │     LSHFT .      .      .     .     │ │     DEL   INST     .     .    .     │
+			 ╰───────────────────────╮ LALT  LGUI  │ │     .     .     ╭───────────────────╯
+			                         ╰─────────────╯ ╰─────────────────╯ 
+			*/
+			
+			
 			 Navigation_layer {
 			 bindings = <
 			 &trans &kp PAGE_DOWN &kp UP &kp PAGE_UP &none &none &kp HOME &kp END &kp END &none
