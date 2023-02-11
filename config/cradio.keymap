@@ -71,35 +71,34 @@
 
  };
 
-
 behaviors {
 
- td0: td_open {
- compatible = "zmk,behavior-tap-dance";
- label = "TD_OPEN";
- #binding-cells = <0>;
- tapping-term-ms = <200>;
- bindings = <&kp LEFT_BRACE>, <&kp LEFT_PARENTHESIS>, <&kp LEFT_BRACKET>, <&kp LT>;
+ open_symbol: td_open {
+   compatible = "zmk,behavior-tap-dance";
+   label = "TD_OPEN";
+   #binding-cells = <0>;
+   tapping-term-ms = <200>;
+   bindings = <&kp LEFT_BRACE>, <&kp LEFT_PARENTHESIS>, <&kp LEFT_BRACKET>, <&kp LT>;
  };
 
- td1: td_close {
- compatible = "zmk,behavior-tap-dance";
- label = "TD_CLOSE";
- #binding-cells = <0>;
- tapping-term-ms = <200>;
- bindings = <&kp RIGHT_BRACE>, <&kp RIGHT_PARENTHESIS>, <&kp RIGHT_BRACKET>, <&kp GT>;
+ close_symbol: td_close {
+   compatible = "zmk,behavior-tap-dance";
+   label = "TD_CLOSE";
+   #binding-cells = <0>;
+   tapping-term-ms = <200>;
+   bindings = <&kp RIGHT_BRACE>, <&kp RIGHT_PARENTHESIS>, <&kp RIGHT_BRACKET>, <&kp GT>;
  };
 
- td2: dot_dot {
- compatible = "zmk,behavior-tap-dance";
- label = "DOT_DOT";
- #binding-cells = <0>;
- tapping-term-ms = <200>;
- bindings = <&kp PERIOD>, <&kp COLON>;
+ dot_dot: dot_dot {
+   compatible = "zmk,behavior-tap-dance";
+   label = "DOT_DOT";
+   #binding-cells = <0>;
+   tapping-term-ms = <200>;
+   bindings = <&kp PERIOD>, <&kp COLON>;
  };
 
 
- td3: comma_comma {
+ comma_comma: comma_comma {
  compatible = "zmk,behavior-tap-dance";
  label = "DOT_DOT";
  #binding-cells = <0>;
@@ -125,7 +124,7 @@ behaviors {
 			 bindings = <
 			 &mt RS(Q) Q &mt RS(W) W &mt RS(E) E &mt RS(R) R &mt RS(T) T &mt RS(Y) Y &mt RS(U) U &mt RS(I) I &mt RS(O) O &mt RS(P) P 
 			 &mt RS(A) A &mt RS(S) S &mt RS(D) D &mt RS(F) F &mt RS(G) G &mt RS(H) H &mt RS(J) J &mt RS(K) K &mt RS(L) L &lt SYMBOLS RETURN 
-			 &mt RS(Z) Z &mt RS(X) X &mt RS(C) C &mt RS(V) V &mt RS(B) B &mt RS(N) N &mt RS(M) M &td3 &td2   &kp  LALT
+			 &mt RS(Z) Z &mt RS(X) X &mt RS(C) C &mt RS(V) V &mt RS(B) B &mt RS(N) N &mt RS(M) M &comma_comma &dot_dot   &kp  LALT
 			 &sk LEFT_CONTROL &lt NUMBERS SPACE &lt MOUSE SPACE &lt NAVIGATION LA(RS(LS(RETURN)))
 			 >;
 			 };
@@ -204,7 +203,7 @@ behaviors {
 			 Numbers_layer {
 			 bindings = <
 			 &mt EXCLAMATION NUMBER_1 &mt AT_SIGN NUMBER_2 &mt HASH NUMBER_3 &mt DOLLAR NUMBER_4 &mt PERCENT NUMBER_5 &mt CARET NUMBER_6 &mt AMPERSAND NUMBER_7 &mt ASTERISK NUMBER_8 &mt LEFT_PARENTHESIS NUMBER_9 &mt RIGHT_PARENTHESIS NUMBER_0 
-			 &kp TILDE &kp RA(W) &kp GRAVE &none &kp SLASH &kp CAPS &td0 &td1 &kp F1 &kp F12 
+			 &kp TILDE &kp RA(W) &kp GRAVE &none &kp SLASH &kp CAPS &open_symbol &close_symbol &kp F1 &kp F12 
 			 &kp F2 &kp F3 &kp LA(F4) &kp LC(F5) &kp F6 &kp F7 &kp F8 &kp F9 &kp F10 &kp F11	
 			 &none &none &none &none 
 			 >;
