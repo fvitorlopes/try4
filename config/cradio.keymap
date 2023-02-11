@@ -121,7 +121,7 @@ behaviors {
 			   bindings = <
 			     &mt RS(Q) Q      &mt RS(W) W    &mt RS(E) E    &mt RS(R) R    &mt RS(T) T         &mt RS(Y) Y     &mt RS(U) U    &mt RS(I) I    &mt RS(O) O   &mt RS(P) P 
 			     &mt RS(A) A      &mt RS(S) S    &mt RS(D) D    &mt RS(F) F    &mt RS(G) G         &mt RS(H) H     &mt RS(J) J    &mt RS(K) K    &mt RS(L) L   &lt SYMBOLS RETURN 
-			     &mt RS(Z) Z      &mt RS(X) X    &mt RS(C) C    &mt RS(V) V    &mt RS(B) B         &mt RS(N) N     &mt RS(M) M    &comma_comma   &dot_dot      &kp LALT
+			     &mt RS(Z) Z      &mt RS(X) X    &mt RS(C) C    &mt RS(V) V    &mt RS(B) B         &mt RS(N) N     &mt RS(M) M    &comma_comma   &dot_dot      &kp BSPC
 			     &sk LEFT_CONTROL &lt NUMBERS SPACE                                                &lt MOUSE SPACE &lt NAVIGATION BSPC
 			   >;
 			 };
