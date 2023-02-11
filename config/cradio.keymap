@@ -32,55 +32,42 @@
 
 
 / { 
-	
-	
-	 /* ================== COMBOS =========================*/
+ /* ================== COMBOS =========================*/
 
  combos {
- compatible = "zmk,combos";
+   compatible = "zmk,combos";
  
  /* 
- ╭────────────────────╮ ╭────────────────────╮
- │ . [ESC] │ │ . [BKS] . . │
- │ . [TAB][WIN] . │ │ . [ENT] . . │
- │ [SHIFT] . . . │ │ . . . . . │
- ╰───────────╮ . . │ │ . . ╭───────────╯
- ╰────────╯ ╰────────╯ */
+   ╭───────────────────────╮ ╭───────────────────────╮
+   │   .   [ESC]   .   .   │ │   .   .   .   .   .   │
+   │   .   [TAB][WIN]  .   │ │   .   [BKP]  .   .   │
+   │   .   .   .   .   .   │ │   .   .   .   .   .   │
+   ╰───────────╮   .   .   │ │   .   .   ╭───────────╯
+               ╰───────────╯ ╰───────────╯
+*/
+   combo_esc {
+     timeout-ms = <27>;
+     key-positions = <1 2>;
+     bindings = <&kp ESC>;
+   };
+
+   combo_tab {
+     timeout-ms = <27>;
+     key-positions = <11 12>;
+     bindings = <&kp TAB>;
+   };
+
+   combo_backspace {
+     timeout-ms = <27>;
+     key-positions = <6 7>;
+     bindings = <&kp BSPC>;
+   };
  
- 
- combo_esc {
- timeout-ms = <27>;
- key-positions = <1 2>;
- bindings = <&kp ESC>;
- };
-
-
- combo_tab {
- timeout-ms = <27>;
- key-positions = <11 12>;
- bindings = <&kp TAB>;
- };
-
-
- combo_enter {
- timeout-ms = <27>;
- key-positions = <16 17>;
- bindings = <&kp ENTER>;
- };
-
- combo_backspace {
- timeout-ms = <27>;
- key-positions = <6 7>;
- bindings = <&kp BSPC>;
- };
-
-
- 
- combo_gui {
- timeout-ms = <27>;
- key-positions = <12 13>;
- bindings = <&kp LGUI>;
- };
+   combo_gui {
+     timeout-ms = <27>;
+     key-positions = <12 13>;
+     bindings = <&kp LGUI>;
+   };
 
  };
 
