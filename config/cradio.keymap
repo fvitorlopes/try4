@@ -204,10 +204,10 @@ behaviors {
 			
 			  Numbers_layer {
 			    bindings = <
-			      &mt EXCLAMATION NUMBER_1  &mt AT_SIGN NUMBER_2  &mt HASH NUMBER_3  &mt DOLLAR NUMBER_4   &mt PERCENT NUMBER_5   &mt CARET NUMBER_6   &mt AMPERSAND NUMBER_7  &mt ASTERISK NUMBER_8   &mt LEFT_PARENTHESIS NUMBER_9  &mt RIGHT_PARENTHESIS NUMBER_0 
-			      &kp TILDE                 &kp RA(W)             &kp GRAVE          &none                 &kp SLASH              &kp CAPS             &open_symbol            &close_symbol           &kp F1                         &kp F12 
-			      &kp F2                    &kp F3                &kp LA(F4)         &kp LC(F5)            &kp F6                 &kp F7               &kp F8                  &kp F9                  &kp F10                        &kp F11	
-			      &none                     &none &none &none 
+			      &mt EXCLAMATION NUMBER_1  &mt AT_SIGN NUMBER_2  &mt HASH NUMBER_3  &mt DOLLAR NUMBER_4   &mt PERCENT NUMBER_5           &mt CARET NUMBER_6   &mt AMPERSAND NUMBER_7  &mt ASTERISK NUMBER_8   &mt LEFT_PARENTHESIS NUMBER_9  &mt RIGHT_PARENTHESIS NUMBER_0 
+			      &kp TILDE                 &kp RA(W)             &kp GRAVE          &none                 &kp SLASH                      &kp CAPS             &open_symbol            &close_symbol           &kp F1                         &kp F12 
+			      &kp F2                    &kp F3                &kp LA(F4)         &kp LC(F5)            &kp F6                         &kp F7               &kp F8                  &kp F9                  &kp F10                        &kp F11	
+			      &none                     &none                                                                                         &none                &none 
 			 >;
 			 };
 
