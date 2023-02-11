@@ -73,68 +73,64 @@
 
 behaviors {
 
- open_symbol: td_open {
-   compatible = "zmk,behavior-tap-dance";
-   label = "TD_OPEN";
-   #binding-cells = <0>;
-   tapping-term-ms = <200>;
-   bindings = <&kp LEFT_BRACE>, <&kp LEFT_PARENTHESIS>, <&kp LEFT_BRACKET>, <&kp LT>;
- };
+   open_symbol: td_open {
+     compatible = "zmk,behavior-tap-dance";
+     label = "TD_OPEN";
+     #binding-cells = <0>;
+     tapping-term-ms = <200>;
+     bindings = <&kp LEFT_BRACE>, <&kp LEFT_PARENTHESIS>, <&kp LEFT_BRACKET>, <&kp LT>;
+   };
 
- close_symbol: td_close {
-   compatible = "zmk,behavior-tap-dance";
-   label = "TD_CLOSE";
-   #binding-cells = <0>;
-   tapping-term-ms = <200>;
-   bindings = <&kp RIGHT_BRACE>, <&kp RIGHT_PARENTHESIS>, <&kp RIGHT_BRACKET>, <&kp GT>;
- };
+   close_symbol: td_close {
+     compatible = "zmk,behavior-tap-dance";
+     label = "TD_CLOSE";
+     #binding-cells = <0>;
+     tapping-term-ms = <200>;
+     bindings = <&kp RIGHT_BRACE>, <&kp RIGHT_PARENTHESIS>, <&kp RIGHT_BRACKET>, <&kp GT>;
+   };
 
- dot_dot: dot_dot {
-   compatible = "zmk,behavior-tap-dance";
-   label = "DOT_DOT";
-   #binding-cells = <0>;
-   tapping-term-ms = <200>;
-   bindings = <&kp PERIOD>, <&kp COLON>;
- };
+   dot_dot: dot_dot {
+     compatible = "zmk,behavior-tap-dance";
+     label = "DOT_DOT";
+     #binding-cells = <0>;
+     tapping-term-ms = <200>;
+     bindings = <&kp PERIOD>, <&kp COLON>;
+  };
 
-
- comma_comma: comma_comma {
- compatible = "zmk,behavior-tap-dance";
- label = "DOT_DOT";
- #binding-cells = <0>;
- tapping-term-ms = <200>;
- bindings = <&kp COMMA>, <&kp SEMICOLON>;
- };
+   comma_comma: comma_comma {
+     compatible = "zmk,behavior-tap-dance";
+     label = "DOT_DOT";
+     #binding-cells = <0>;
+     tapping-term-ms = <200>;
+     bindings = <&kp COMMA>, <&kp SEMICOLON>;
+   };
 
  };
 
         keymap {
                 compatible = "zmk,keymap";
                 
-			   /* BASE 
+			 /*                    BASE 
 			 base layer contains autoshift on alpha chars
-			 ╭────────────────────╮ ╭────────────────────╮
-			 │ Q W E R T │ │ Y U I O P │
-			 │ A S D F G │ │ H J K L RET│
-			 │ Z X C V B │ │ N M , . BS │
-			 ╰───────────╮ CTL SP │ │ NV MOU╭───────────╯
-			 ╰────────╯ ╰────────╯ */
+			 ╭──────────────────────╮ ╭──────────────────────╮
+			 │   Q   W   E   R   T  │ │   Y   U   I   O   P  │
+			 │   A   S   D   F   G  │ │   H   J   K   L   RET│
+			 │   Z   X   C   V   B  │ │   N   M   ,   .   BS │
+			 ╰───────────╮   CTL SP │ │   NV  MOU╭───────────╯
+			             ╰──────────╯ ╰──────────╯ 
+		         */
 
 			 Base_layer {
-			 bindings = <
-			 &mt RS(Q) Q &mt RS(W) W &mt RS(E) E &mt RS(R) R &mt RS(T) T &mt RS(Y) Y &mt RS(U) U &mt RS(I) I &mt RS(O) O &mt RS(P) P 
-			 &mt RS(A) A &mt RS(S) S &mt RS(D) D &mt RS(F) F &mt RS(G) G &mt RS(H) H &mt RS(J) J &mt RS(K) K &mt RS(L) L &lt SYMBOLS RETURN 
-			 &mt RS(Z) Z &mt RS(X) X &mt RS(C) C &mt RS(V) V &mt RS(B) B &mt RS(N) N &mt RS(M) M &comma_comma &dot_dot   &kp  LALT
-			 &sk LEFT_CONTROL &lt NUMBERS SPACE &lt MOUSE SPACE &lt NAVIGATION LA(RS(LS(RETURN)))
-			 >;
+			   bindings = <
+			     &mt RS(Q) Q    &mt RS(W) W    &mt RS(E) E    &mt RS(R) R    &mt RS(T) T         &mt RS(Y) Y    &mt RS(U) U    &mt RS(I) I    &mt RS(O) O   &mt RS(P) P 
+			     &mt RS(A) A    &mt RS(S) S    &mt RS(D) D    &mt RS(F) F    &mt RS(G) G         &mt RS(H) H    &mt RS(J) J    &mt RS(K) K    &mt RS(L) L   &lt SYMBOLS RETURN 
+			     &mt RS(Z) Z    &mt RS(X) X    &mt RS(C) C    &mt RS(V) V    &mt RS(B) B         &mt RS(N) N    &mt RS(M) M    &comma_comma   &dot_dot      &kp LALT
+			     &sk LEFT_CONTROL &lt NUMBERS SPACE                                              &lt MOUSE SPACE &lt NAVIGATION LA(RS(LS(RETURN)))
+			   >;
 			 };
-
-
-
-
-
-
-			 /* MOUSE AND MEDIA CONTROL
+			 
+			 
+			 /*                       MOUSE AND MEDIA CONTROL
 			 ╭──────────────────────────────────╮ ╭──────────────────────────────────╮
 			 │ . LFTCL UP RGTCL . │ │ VOLU SCRU SCRD SCRD . │
 			 │ . LEFT DOWN RIGHT . │ │ VOLD MO1 MO2 MO3 . │
