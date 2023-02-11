@@ -2,7 +2,15 @@
  * Copyright (c) 2020 The ZMK Contributors
  *
  * SPDX-License-Identifier: MIT
- */
+ *
+ TODO
+ 
+  fix LALT right and left
+  add alt to f4
+  add LCTR to f5
+  add single hand shift somewere
+  
+ /
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
@@ -122,10 +130,10 @@ behaviors {
 
 			 Base_layer {
 			   bindings = <
-			     &mt RS(Q) Q    &mt RS(W) W    &mt RS(E) E    &mt RS(R) R    &mt RS(T) T         &mt RS(Y) Y    &mt RS(U) U    &mt RS(I) I    &mt RS(O) O   &mt RS(P) P 
-			     &mt RS(A) A    &mt RS(S) S    &mt RS(D) D    &mt RS(F) F    &mt RS(G) G         &mt RS(H) H    &mt RS(J) J    &mt RS(K) K    &mt RS(L) L   &lt SYMBOLS RETURN 
-			     &mt RS(Z) Z    &mt RS(X) X    &mt RS(C) C    &mt RS(V) V    &mt RS(B) B         &mt RS(N) N    &mt RS(M) M    &comma_comma   &dot_dot      &kp LALT
-			     &sk LEFT_CONTROL &lt NUMBERS SPACE                                              &lt MOUSE SPACE &lt NAVIGATION LA(RS(LS(RETURN)))
+			     &mt RS(Q) Q      &mt RS(W) W    &mt RS(E) E    &mt RS(R) R    &mt RS(T) T         &mt RS(Y) Y     &mt RS(U) U    &mt RS(I) I    &mt RS(O) O   &mt RS(P) P 
+			     &mt RS(A) A      &mt RS(S) S    &mt RS(D) D    &mt RS(F) F    &mt RS(G) G         &mt RS(H) H     &mt RS(J) J    &mt RS(K) K    &mt RS(L) L   &lt SYMBOLS RETURN 
+			     &mt RS(Z) Z      &mt RS(X) X    &mt RS(C) C    &mt RS(V) V    &mt RS(B) B         &mt RS(N) N     &mt RS(M) M    &comma_comma   &dot_dot      &kp LALT
+			     &sk LEFT_CONTROL &lt NUMBERS SPACE                                                &lt MOUSE SPACE &lt NAVIGATION LA(RS(LS(RETURN)))
 			   >;
 			 };
 			 
@@ -143,7 +151,7 @@ behaviors {
 			     bindings = <
 			     &none     &mkp LCLK      &mmv MOVE_UP   &mkp RCLK       &none         &kp K_VOLUME_UP   &mwh SCROLL_UP  &mwh SCROLL_DOWN  &mwh SCROLL_DOWN &trans 
 			     &trans    &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &none         &kp K_VOLUME_DOWN &kp LC(F13)     &kp LC(F14)       &kp LC(F15)      &trans
-			     &trans    &none          &kp LC(LEFT)   &kp LC(RIGHT)   &none         &kp K_MUTE        &kp LC(PAGE_UP) &kp LC(PAGE_DOWN) &none            &trans 
+			     &trans    &none          &kp LA(LEFT)   &kp LA(RIGHT)   &none         &kp K_MUTE        &kp LC(PAGE_UP) &kp LC(PAGE_DOWN) &none            &trans 
 			     &mkp LCLK &mkp RCLK &none &none 
 			   >;
 			 };
