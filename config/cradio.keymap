@@ -40,7 +40,7 @@
  /* 
    ╭───────────────────────╮ ╭───────────────────────╮
    │   .   [ESC]   .   .   │ │   .   .   .   .   .   │
-   │   .   [TAB][WIN]  .   │ │   .   [BKP]  .   .   │
+   │   .   [TAB][WIN]  .   │ │   .   [BKP]   .   .   │
    │   .   .   .   .   .   │ │   .   .   .   .   .   │
    ╰───────────╮   .   .   │ │   .   .   ╭───────────╯
                ╰───────────╯ ╰───────────╯
@@ -131,25 +131,22 @@ behaviors {
 			 
 			 
 			 /*                       MOUSE AND MEDIA CONTROL
-			 ╭──────────────────────────────────╮ ╭──────────────────────────────────╮
-			 │ . LFTCL UP RGTCL . │ │ VOLU SCRU SCRD SCRD . │
-			 │ . LEFT DOWN RIGHT . │ │ VOLD MO1 MO2 MO3 . │
-			 │ . . PAGEB PAGEF . │ │ MUTE PAGU PAGD . . │
-			 ╰────────────────╮ LFTCL RGTCL │ │ . . ╭────────────────╯
-			 ╰─────────────────╯ ╰─────────────────╯ */
-			 Mouse_layer {
-			 bindings = <
-			 &none &mkp LCLK &mmv MOVE_UP &mkp RCLK &none &kp K_VOLUME_UP &mwh SCROLL_UP &mwh SCROLL_DOWN &mwh SCROLL_DOWN &trans 
-			 &trans &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &none &kp K_VOLUME_DOWN &kp LC(F13) &kp LC(F14) &kp LC(F15) &trans
-			 &trans &none &kp LC(LEFT) &kp LC(RIGHT) &none &kp K_MUTE &kp LC(PAGE_UP) &kp LC(PAGE_DOWN) &none &trans 
-			 &mkp LCLK &mkp RCLK &none &none 
-			 >;
+			 ╭──────────────────────────────────────────╮ ╭───────────────────────────────────╮
+			 │      .      LFTCL UP    RGTCL     .      │ │ VOLU SCRU SCRD SCRD    .    .     │
+			 │      .      LEFT  DOWN  RIGHT     .      │ │ VOLD MO1  MO2  MO3     .    .     │
+			 │      .      .     PAGEB PAGEF     .      │ │ MUTE PAGU PAGD .       .    .     │
+			 ╰────────────────╮  LFTCL RGTCL     .      │ │                 ╭─────────────────╯
+			                  ╰─────────────────────────╯ ╰─────────────────╯ 
+			*/
+			
+		           Mouse_layer {
+			     bindings = <
+			     &none     &mkp LCLK      &mmv MOVE_UP   &mkp RCLK       &none         &kp K_VOLUME_UP   &mwh SCROLL_UP  &mwh SCROLL_DOWN  &mwh SCROLL_DOWN &trans 
+			     &trans    &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &none         &kp K_VOLUME_DOWN &kp LC(F13)     &kp LC(F14)       &kp LC(F15)      &trans
+			     &trans    &none          &kp LC(LEFT)   &kp LC(RIGHT)   &none         &kp K_MUTE        &kp LC(PAGE_UP) &kp LC(PAGE_DOWN) &none            &trans 
+			     &mkp LCLK &mkp RCLK &none &none 
+			   >;
 			 };
-
-
-
-
-
 
 			 /* NAVIGATION AND MODIFIERS
 			 ╭──────────────────────────────────╮ ╭──────────────────────────────────╮
