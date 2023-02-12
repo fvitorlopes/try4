@@ -156,10 +156,10 @@ behaviors {
 			
 			   Navigation_layer {
 			     bindings = <
-			       &kp ESC         &kp PAGE_DOWN &kp UP     &kp PAGE_UP  &none            &none    &kp HOME       &kp END         &kp END    &kp BSPC
-			       &kp TAB        &kp LEFT      &kp DOWN   &kp RIGHT    &none            &none    &sk LEFT_SHIFT &sk LEFT_CONTROL &sk LALT   &kp RETURN
-			       &kp LEFT_SHIFT &none         &none      &none        &none            &kp DEL  &kp INSERT     &none            &none      &none 
-			       &kp LEFT_ALT   &kp LEFT_GUI                                           &none    &none 
+			       &kp ESC         &kp PAGE_DOWN &kp UP     &kp PAGE_UP &kp LA(RS(LS(L)))     &none    &kp HOME       &kp END         &kp END    &kp BSPC
+			       &kp TAB        &kp LEFT      &kp DOWN   &kp RIGHT    &kp LA(RS(LS(K)))     &none    &sk LEFT_SHIFT &sk LEFT_CONTROL &sk LALT   &kp RETURN
+			       &kp LEFT_SHIFT &none         &none      &none        &none                 &kp DEL  &kp INSERT     &none            &none      &none 
+			       &kp LEFT_ALT   &kp LEFT_GUI                                                &none    &none 
 			     >;
 			 };
 
