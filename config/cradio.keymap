@@ -96,7 +96,7 @@ behaviors {
 
    comma_comma: comma_comma {
      compatible = "zmk,behavior-tap-dance";
-     label = "DOT_DOT";
+     label = "COMMA_COMMA";
      #binding-cells = <0>;
      tapping-term-ms = <200>;
      bindings = <&kp COMMA>, <&kp SEMICOLON>;
