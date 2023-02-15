@@ -21,7 +21,7 @@
 };
 
 &mt {
-	tapping-term-ms = <600>;
+	tapping-term-ms = <460>;
 	flavor = "tap-preferred";
 };
 
@@ -157,7 +157,7 @@ behaviors {
 			   Navigation_layer {
 			     bindings = <
 			       &kp ESC         &kp PAGE_DOWN &kp UP     &kp PAGE_UP &kp LA(RS(LS(L)))     &kp Y    &kp HOME       &kp END         &kp END    &kp BSPC
-			       &kp TAB        &kp LEFT      &kp DOWN   &kp RIGHT    &kp LA(RS(LS(K)))     &none    &sk LEFT_SHIFT &sk LEFT_CONTROL &sk LALT   &kp RETURN
+			       &kp TAB        &kp LEFT      &kp DOWN   &kp RIGHT    &kp LA(RS(LS(K)))     &none    &sk LEFT_SHIFT &sk LEFT_CONTROL &sk LALT  &kp RETURN
 			       &kp Z         &kp X         &kp C      &kp V        &none                 &kp DEL  &kp INSERT     &none            &none      &none 
 			       &kp LEFT_CONTROL &kp LEFT_GUI                                                &none    &none 
 			     >;
@@ -175,9 +175,9 @@ behaviors {
 			
 			   Symbols_layer {
 			     bindings = <
-			       &kp SINGLE_QUOTE  &kp DOUBLE_QUOTES  &kp SLASH   &kp BACKSLASH   &kp PIPE             &kp CARET   &kp LT     &kp GT          &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS 
-			       &kp TILDE         &kp QMARK          &kp GRAVE   &none           &kp SLASH            &kp PIPE    &kp RA(W)  &mt UNDER MINUS &mt EQUAL PLUS        &none 
-			       &none             &none              &none       &none           &kp BACKSLASH        &none       &kp LT     &kp GT          &kp LT                &kp GT 
+			       &kp SINGLE_QUOTE  &kp DOUBLE_QUOTES  &kp SLASH   &kp BACKSLASH   &kp PIPE             &kp CARET   &kp LT            &kp GT           &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS 
+			       &kp TILDE         &kp QMARK          &kp GRAVE   &none           &kp SLASH            &kp PIPE    &mt MINUS UNDER   &mt EQUAL PLUS   &none                 &none     
+			       &none             &none              &none       &none           &kp BACKSLASH        &none       &kp LT            &kp GT           &kp LT                &kp GT 
 			       &none             &none                                                               &none       &none 
 			    >;
 			 };
@@ -194,7 +194,7 @@ behaviors {
 			  Numbers_layer {
 			    bindings = <
 			      &mt EXCLAMATION NUMBER_1  &mt AT_SIGN NUMBER_2  &mt HASH NUMBER_3  &mt DOLLAR NUMBER_4   &mt PERCENT NUMBER_5           &mt CARET NUMBER_6   &mt AMPERSAND NUMBER_7  &mt ASTERISK NUMBER_8   &mt LEFT_PARENTHESIS NUMBER_9  &mt RIGHT_PARENTHESIS NUMBER_0 
-			      &kp TILDE                 &kp QMARK             &kp LC(SINGLE_QUOTE)          &sk LEFT_SHIFT        &kp SLASH                      &kp CAPS             &open_symbol            &close_symbol           &kp F1                         &kp F12 
+			      &kp TILDE                 &kp QMARK             &kp LC(SINGLE_QUOTE)          &sk LEFT_SHIFT        &kp SLASH                      &kp CAPS             &open_symbol            &close_symbol           &mt MINUS UNDER   &mt EQUAL PLUS 
 			      &kp F2                    &kp F3                &kp LA(F4)         &kp LC(F5)            &kp F6                         &kp F7               &kp F8                  &kp F9                  &kp F10                        &kp F11	
 			      &none                     &none                                                                                         &none                &none 
 			 >;
