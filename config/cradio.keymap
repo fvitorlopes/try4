@@ -21,7 +21,7 @@
 };
 
 &mt {
-	tapping-term-ms = <460>;
+	tapping-term-ms = <400>;
 	flavor = "tap-preferred";
 };
 
@@ -35,7 +35,7 @@
  /* 
    ╭───────────────────────╮ ╭───────────────────────╮
    │   .   .   .   .   .   │ │   .   .   .   .   .   │
-   │   .   [TAB][WIN]  .   │ │   .   [ESC][MEH]  .   │
+   │   .   .   .   .   .   │ │   .   .   [MEH]   .   │
    │   .   .   .   .   .   │ │   .   .   .   .   .   │
    ╰───────────╮   .   .   │ │   .   .   ╭───────────╯
                ╰───────────╯ ╰───────────╯
@@ -94,8 +94,8 @@ behaviors {
 			 base layer contains autoshift on alpha chars
 			 ╭──────────────────────╮ ╭──────────────────────╮
 			 │   Q   W   E   R   T  │ │   Y   U   I   O   P  │
-			 │   A   S   D   F   G  │ │   H   J   K   L   RET│
-			 │   Z   X   C   V   B  │ │   N   M   ,   .   BS │
+			 │   A   S   D   F   G  │ │   H   J   K   L   ENT│
+			 │   Z   X   C   V   B  │ │   N   M   ,;  .:  LA │
 			 ╰───────────╮   CTL SP │ │   NV  MOU╭───────────╯
 			             ╰──────────╯ ╰──────────╯ 
 		         */
@@ -112,9 +112,9 @@ behaviors {
 			 
 			 /*                       MOUSE AND MEDIA CONTROL
 			 ╭──────────────────────────────────────────╮ ╭───────────────────────────────────╮
-			 │      .      LFTCL UP    RGTCL     .      │ │ VOLU SCRU SCRD SCRD    .    .     │
-			 │      .      LEFT  DOWN  RIGHT     .      │ │ VOLD MO1  MO2  MO3     .    .     │
-			 │      .      .     PAGEB PAGEF     .      │ │ MUTE PAGU PAGD .       .    .     │
+			 │      ESC    LFTCL UP    RGTCL     .      │ │ VOLU SCRU SCRD SCRD    .    BSPC  │
+			 │      TAB    LEFT  DOWN  RIGHT     .      │ │ VOLD MO1  MO2  MO3     .    ENT   │
+			 │      LS     .     PAGEB PAGEF     .      │ │ MUTE PAGU PAGD .       .    LALT  │
 			 ╰────────────────╮  LFTCL RGTCL     .      │ │                 ╭─────────────────╯
 			                  ╰─────────────────────────╯ ╰─────────────────╯ 
 			*/
@@ -130,9 +130,9 @@ behaviors {
 
 			 /*                         NAVIGATION AND MODIFIERS
 			 ╭─────────────────────────────────────╮ ╭─────────────────────────────────────╮
-			 │     .     PAGDW  UP     PAGUP .     │ │     .     HOME     END   END  .     │
-			 │     TAB   LEFT   DOWN   RIGHT .     │ │     .     LSHFT    LCTRL LALT LGUI  │
-			 │     LSHFT .      .      .     .     │ │     DEL   INST     .     .    .     │
+			 │     ESC   PAGDW  UP     PAGUP .     │ │     Y     HOME     END   END  BSPC  │
+			 │     TAB   LEFT   DOWN   RIGHT .     │ │     .     LSHFT    LCTRL LALT ENT   │
+			 │     Z     X      C      V     .     │ │     DEL   INST     .     .    LALT  │
 			 ╰───────────────────────╮ LALT  LGUI  │ │     .     .     ╭───────────────────╯
 			                         ╰─────────────╯ ╰─────────────────╯ 
 			*/
@@ -149,10 +149,10 @@ behaviors {
 	
 			 /*                         SYMBOLS AND MODIFIERS
 			 ╭──────────────────────────────────╮ ╭──────────────────────────────────╮
-			 │     '     "     \     Blash │    │ │     ¨     <     >     (     )    │
-			 │     ~     ?     ^     .     \    │ │     ({    })    _-    =+    .    │
-			 │     .     .     .     .     .    │ │     .     .     .     .     .    │ 
-			 ╰────────────────╮      .     .  │ │ .     .     .     ╭────────────────╯
+			 │     ESC     '"    \     Blash │  │ │     ¨     <     >     (     )    │
+			 │     TAB     ?     ^     .     \  │ │     │     ({    })    _-    =+ . │
+			 │     LCTR    .     .     .     .  │ │     .     .     .     .     .    │ 
+			 ╰────────────────╮        .     .  │ │     .     .     ╭────────────────╯
 			                  ╰─────────────────╯ ╰─────────────────╯ 
 			*/
 			
