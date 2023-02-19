@@ -124,7 +124,7 @@ behaviors {
 			     &kp ESC        &mkp LCLK      &mmv MOVE_UP   &mkp RCLK       &none                    &kp K_VOLUME_UP   &mwh SCROLL_UP  &mwh SCROLL_DOWN  &mwh SCROLL_DOWN &kp BSPC
 			     &kp TAB        &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &kp LG(LS(S))           &kp K_VOLUME_DOWN &kp LC(F13)     &kp LC(F14)       &kp LC(F15)      &kp RETURN
 			     &kp LEFT_SHIFT &none          &kp LA(LEFT)   &kp LA(RIGHT)   &none                    &kp K_MUTE        &kp LC(PAGE_UP) &kp LC(PAGE_DOWN) &none            &kp LALT
-			     &mkp LCLK &mkp RCLK                                                                   &none             &none 
+			     &mkp RCLK &mkp LCLK                                                                   &none             &none 
 			   >;
 			 };
 
@@ -139,7 +139,7 @@ behaviors {
 			
 			   Navigation_layer {
 			     bindings = <
-			       &kp ESC         &kp PAGE_DOWN &kp UP     &kp PAGE_UP  &none               &kp Y    &kp LS(LEFT)   &kp LS(RIGHT)    &kp END    &kp BSPC
+			       &kp ESC         &kp PAGE_DOWN &kp UP     &kp PAGE_UP  &none               &kp Y    &kp LG(LS(LEFT)    &kp LS((RIGHT))  &kp END    &kp BSPC
 			       &kp TAB         &kp LEFT      &kp DOWN   &kp RIGHT    &none               &none    &sk LEFT_SHIFT     &sk LEFT_CONTROL &sk LALT   &kp RETURN
 			       &kp Z           &kp X         &kp C      &kp V        &none               &kp DEL  &kp INSERT         &none            &none      &kp LALT
 			       &kp LEFT_CONTROL &kp LEFT_GUI                                             &none    &none 
