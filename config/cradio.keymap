@@ -58,7 +58,7 @@ behaviors {
      label = "TD_OPEN";
      #binding-cells = <0>;
      tapping-term-ms = <200>;
-     bindings = <&kp LEFT_BRACE>, <&kp LEFT_PARENTHESIS>, <&kp LEFT_BRACKET>, <&kp LT>;
+     bindings = <&kp LEFT_BRACE>, <&kp LEFT_PARENTHESIS>, <&kp LEFT_BRACKET>;
    };
 
    close_symbol: td_close {
@@ -66,7 +66,7 @@ behaviors {
      label = "TD_CLOSE";
      #binding-cells = <0>;
      tapping-term-ms = <200>;
-     bindings = <&kp RIGHT_BRACE>, <&kp RIGHT_PARENTHESIS>, <&kp RIGHT_BRACKET>, <&kp GT>;
+     bindings = <&kp RIGHT_BRACE>, <&kp RIGHT_PARENTHESIS>, <&kp RIGHT_BRACKET>;
    };
 
    dot_dot: dot_dot {
@@ -104,7 +104,7 @@ behaviors {
 			   bindings = <
 			     &mt RS(Q) Q      &mt RS(W) W    &mt RS(E) E    &mt RS(R) R    &mt RS(T) T         &mt RS(Y) Y     &mt RS(U) U    &mt RS(I) I    &mt RS(O) O   &mt RS(P) P 
 			     &mt RS(A) A      &mt RS(S) S    &mt RS(D) D    &mt RS(F) F    &mt RS(G) G         &mt RS(H) H     &mt RS(J) J    &mt RS(K) K    &mt RS(L) L   &lt SYMBOLS RETURN 
-			     &mt RS(Z) Z      &mt RS(X) X    &mt RS(C) C    &mt RS(V) V    &mt RS(B) B         &mt RS(N) N     &mt RS(M) M    &comma_comma   &dot_dot      &kp LALT
+			     &mt RS(Z) Z      &mt RS(X) X    &mt RS(C) C    &mt RS(V) V    &mt RS(B) B         &mt RS(N) N     &mt RS(M) M    &comma_comma   &dot_dot      &kp LA(LCTRL)
 			     &sk LEFT_CONTROL &lt NUMBERS SPACE                                                &lt MOUSE SPACE &lt NAVIGATION BSPC
 			   >;
 			 };
@@ -122,7 +122,7 @@ behaviors {
 		           Mouse_layer {
 			     bindings = <
 			     &kp ESC        &mkp LCLK      &mmv MOVE_UP   &mkp RCLK       &none                    &kp K_VOLUME_UP   &mwh SCROLL_UP     &mwh SCROLL_DOWN  &mwh SCROLL_DOWN &kp BSPC
-			     &kp TAB        &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &kp LG(LS(S))           &kp K_VOLUME_DOWN  &kp LG(LC(LEFT))   &kp LC(F14)       &kp LG(LC(RIGHT))      &kp RETURN
+			     &kp TAB        &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &kp LG(LS(S))            &kp K_VOLUME_DOWN &none              &none             &none         &kp RETURN
 			     &kp LEFT_SHIFT &none          &kp LA(LEFT)   &kp LA(RIGHT)   &none                    &kp K_MUTE        &kp LC(PAGE_UP)    &kp LC(PAGE_DOWN) &none            &kp LALT
 			     &mkp RCLK &mkp LCLK                                                                   &none             &none 
 			   >;
@@ -158,10 +158,10 @@ behaviors {
 			
 			   Symbols_layer {
 			     bindings = <
-			       &kp ESC           &mt DOUBLE_QUOTES SINGLE_QUOTE  &kp GRAVE   &kp SLASH   &none                    &kp BACKSLASH    &kp PIPE          &kp CARET          &none             &kp BSPC   
-			       &kp TAB           &kp QMARK                       &kp TILDE   &kp SLASH   &none                    &kp PIPE         &mt MINUS UNDER   &mt EQUAL PLUS     &none            &kp RETURN     
-			       &sk LEFT_CONTROL  &none                           &none       &none       &none                    &kp BACKSLASH    &kp LT             &kp GT            &none            &kp LALT
-			       &none             &kp LEFT_GUI                                                                     &none            &none 
+			       &kp ESC           &mt DOUBLE_QUOTES SINGLE_QUOTE  &kp GRAVE   &kp BACKSLASH  &none                    &kp BACKSLASH    &kp PIPE          &kp CARET          &none             &kp BSPC   
+			       &kp TAB           &kp QMARK                       &kp TILDE   &kp SLASH      &none                    &kp PIPE         &mt MINUS UNDER   &mt EQUAL PLUS     &none            &kp RETURN     
+			       &sk LEFT_CONTROL  &none                           &none       &none          &none                    &kp BACKSLASH    &kp LT             &kp GT            &none            &kp LALT
+			       &none             &none                                                                               &none            &none 
 			    >;
 			 };
 
@@ -179,7 +179,7 @@ behaviors {
 			      &mt EXCLAMATION NUMBER_1  &mt AT_SIGN NUMBER_2  &mt HASH NUMBER_3      &mt DOLLAR NUMBER_4   &mt PERCENT NUMBER_5           &mt CARET NUMBER_6   &mt AMPERSAND NUMBER_7  &mt ASTERISK NUMBER_8   &mt LEFT_PARENTHESIS NUMBER_9  &mt RIGHT_PARENTHESIS NUMBER_0 
 			      &kp TILDE                 &kp QMARK             &kp LC(SINGLE_QUOTE)   &sk LEFT_SHIFT        &kp SLASH                      &kp CAPS             &open_symbol            &close_symbol           &mt MINUS UNDER                &mt EQUAL PLUS 
 			      &kp F2                    &kp F3                &kp LA(F4)             &kp LC(F5)            &kp F6                         &kp F7               &kp F8                  &kp F9                  &kp F10                        &kp F11	
-			      &none                     &none                                                                                             &kp LEFT_GUI         &none 
+			      &none                     &none                                                                                             &none         &none 
 			 >;
 			 };
 
