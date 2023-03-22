@@ -120,7 +120,7 @@ behaviors {
 		           Shortcuts {
 			     bindings = <
 			     &kp ESC        &mkp LCLK      &mmv MOVE_UP   &mkp RCLK       &none                    &kp K_VOLUME_UP   &mwh SCROLL_UP       &mwh SCROLL_DOWN    &mwh SCROLL_DOWN      &kp BSPC
-			     &kp TAB        &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &kp LG(LS(S))            &kp K_VOLUME_DOWN &mt RS(LA(J)) LA(J)  &mt RS(LA(K)) LA(K) &mt RS(LA(L)) LA(L)   &kp RETURN
+			     &kp TAB        &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &kp LG(LS(S))            &kp K_VOLUME_DOWN &none                &none               &none                 &kp RETURN
 			     &kp LEFT_SHIFT &none          &kp LA(LEFT)   &kp LA(RIGHT)   &LG(V)                   &kp K_MUTE        &kp LC(PAGE_UP)      &kp LC(PAGE_DOWN)   &none                 &kp LALT
 			     &mkp RCLK      &mkp &kp LEFT_GUI                                                      &none             &none 
 			   >;
