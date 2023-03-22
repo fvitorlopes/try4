@@ -8,7 +8,7 @@
 
 #define BASE 0
 #define NAVIGATION 1
-#define MOUSE 2
+#define SHORTCUTS 2
 #define SYMBOLS 3
 #define NUMBERS 4
 
@@ -102,8 +102,8 @@ behaviors {
 			   bindings = <
 			     &mt RS(Q) Q      &mt RS(W) W    &mt RS(E) E    &mt RS(R) R    &mt RS(T) T         &mt RS(Y) Y     &mt RS(U) U    &mt RS(I) I    &mt RS(O) O   &mt RS(P) P 
 			     &mt RS(A) A      &mt RS(S) S    &mt RS(D) D    &mt RS(F) F    &mt RS(G) G         &mt RS(H) H     &mt RS(J) J    &mt RS(K) K    &mt RS(L) L   &lt SYMBOLS RETURN 
-			     &mt RS(Z) Z      &mt RS(X) X    &mt RS(C) C    &mt RS(V) V    &mt RS(B) B         &mt RS(N) N     &mt RS(M) M    &comma_comma   &dot_dot      &kp LCLK
-			     &sk LEFT_CONTROL &lt NUMBERS SPACE                                                &mt LALT SPACE &lt NAVIGATION BSPC
+			     &mt RS(Z) Z      &mt RS(X) X    &mt RS(C) C    &mt RS(V) V    &mt RS(B) B         &mt RS(N) N     &mt RS(M) M    &comma_comma   &dot_dot      &mo NAVIGATION
+			     &sk LEFT_CONTROL &lt NUMBERS SPACE                                                &lt SHORTCUTS SPACE     &lt NAVIGATION BSPC
 			   >;
 			 };
 			 
@@ -117,12 +117,12 @@ behaviors {
 			                  ╰─────────────────────────╯ ╰─────────────────╯ 
 			*/
 			
-		           Mouse_layer {
+		           Shortcuts {
 			     bindings = <
-			     &kp ESC        &mkp LCLK      &mmv MOVE_UP   &mkp RCLK       &none                    &kp K_VOLUME_UP   &mwh SCROLL_UP     &mwh SCROLL_DOWN  &mwh SCROLL_DOWN &kp BSPC
-			     &kp TAB        &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &kp LG(LS(S))            &kp K_VOLUME_DOWN &none              &none             &none         &kp RETURN
-			     &kp LEFT_SHIFT &none          &kp LA(LEFT)   &kp LA(RIGHT)   &none                    &kp K_MUTE        &kp LC(PAGE_UP)    &kp LC(PAGE_DOWN) &none            &kp LALT
-			     &mkp RCLK &mkp LCLK                                                                   &none             &none 
+			     &kp ESC        &mkp LCLK      &mmv MOVE_UP   &mkp RCLK       &none                    &kp K_VOLUME_UP   &mwh SCROLL_UP       &mwh SCROLL_DOWN    &mwh SCROLL_DOWN      &kp BSPC
+			     &kp TAB        &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &kp LG(LS(S))            &kp K_VOLUME_DOWN &mt RS(LA(J)) LA(J)  &mt RS(LA(K)) LA(K) &mt RS(LA(L)) LA(L)   &kp RETURN
+			     &kp LEFT_SHIFT &none          &kp LA(LEFT)   &kp LA(RIGHT)   &LG(V)                   &kp K_MUTE        &kp LC(PAGE_UP)      &kp LC(PAGE_DOWN)   &none                 &kp LALT
+			     &mkp RCLK      &mkp &kp LEFT_GUI                                                      &none             &none 
 			   >;
 			 };
 
