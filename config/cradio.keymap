@@ -56,7 +56,7 @@ macros {
     };
 
 
-  mw3: mw1 {
+  mw3: mw3 {
     label = "mw3";
     compatible = "zmk,behavior-macro";
     #binding-cells = <0>;
