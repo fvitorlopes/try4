@@ -42,7 +42,7 @@ macros {
                 = <&macro_press &kp LALT>
                 , <&macro_tap &kp S>
                 , <&macro_release &kp LALT>
-		, <&macro_tap_time 100>
+		, <&macro_tap_time 70>
 		, <&macro_tap &kp PAUSE_BREAK>
                 ;
 
@@ -57,7 +57,7 @@ macros {
                 = <&macro_press &kp LALT>
                 , <&macro_tap &kp F>
                 , <&macro_release &kp LALT>
-		, <&macro_tap_time 100>
+		, <&macro_tap_time 70>
 		, <&macro_tap &kp PAUSE_BREAK>
                 ;
     };
