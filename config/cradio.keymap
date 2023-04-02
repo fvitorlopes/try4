@@ -31,8 +31,8 @@
  /* ================== MACROS =========================*/
 
 macros {
-  zed_em_kay: zed_em_kay {
-    label = "ZM_zed_em_kay";
+  mw1: mw1 {
+    label = "mw1";
     compatible = "zmk,behavior-macro";
     #binding-cells = <0>;
     bindings
