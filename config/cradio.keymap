@@ -233,7 +233,7 @@ behaviors {
 			  Window_manager_layer {
 			    bindings = <
 			      &none                    &none                  &none                  &none                 &none                          &none                &none                  &none                    &none                          &none
-			      &none                    &none                  &none                  &none                 &none                          &none                &none                  &none                    &none                		  &none
+			      &none                    &none                  &none                  &none                 &none                          &none                &mw1                   &mw2                     &mw3                  		  &none
 			      &none                    &none                  &none                  &none                 &none                          &none                &none                  &none                    &none                          &none	
 			      &none                    &none                                                                                              &none                &none 
 			    >;
