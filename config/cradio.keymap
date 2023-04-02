@@ -232,8 +232,8 @@ behaviors {
 
 			  Window_manager_layer {
 			    bindings = <
-			      &none                    &none                  &none                  &none                 &none                          &none                &none                  &none                    &none                          &none
-			      &none                    &none                  &none                  &none                 &none                          &none                &mw1                   &mw2                     &mw3                  		  &none
+			      &none                    &none                  &mt LA(RS(E)) LA(E)    &none                 &none                          &none                &none                  &none                    &none                          &none
+			      &none                    &mt LA(RS(S)) LA(S)    &mt LA(RS(D)) LA(D)    &mt LA(RS(F)) LA(F)   &none                          &none                &mw1                   &mw2                     &mw3                  		  &none
 			      &none                    &none                  &none                  &none                 &none                          &none                &none                  &none                    &none                          &none	
 			      &none                    &none                                                                                              &none                &none 
 			    >;
