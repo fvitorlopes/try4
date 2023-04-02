@@ -33,39 +33,40 @@
  /* ================== MACROS =========================*/
 
 macros {
-  mwleft: mwleft {
-    label = "mwleft";
+  mw1: mw1 {
+    label = "mw1";
     compatible = "zmk,behavior-macro";
     #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp LALT>
-                , <&macro_tap &kp S>
-                , <&macro_release &kp LALT>
-		, <&macro_tap_time 100>
-		, <&macro_tap &kp S>
-		, <&macro_tap &kp PAUSE_BREAK>
-                ;
-    };
-
-  mwright: mwright {
-    label = "mwright";
-    compatible = "zmk,behavior-macro";
-    #binding-cells = <0>;
-        wait-ms = <10>;
-        bindings
-                = <&macro_press &kp LALT>
-                , <&macro_tap &kp F>
-                , <&macro_release &kp LALT>
-		, <&macro_tap_time 100>
-		, <&macro_tap &kp F>
-		, <&macro_tap &kp PAUSE_BREAK>
-                ;
     bindings
-        = <&kp LA(F)>
+        = <&kp LA(J)>
         , <&macro_wait_time 30>
         , <&kp F13>
         ;
     };
+
+  mw2: mw2 {
+    label = "mw2";
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    bindings
+        = <&kp LA(K)>
+        , <&macro_wait_time 30>
+        , <&kp F13>
+        ;
+    };
+
+
+  mw3: mw3 {
+    label = "mw3";
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    bindings
+        = <&kp LA(L)>
+        , <&macro_wait_time 30>
+        , <&kp F13>
+        ;
+    };
+
 
  };
 
@@ -148,7 +149,7 @@ behaviors {
 			     &mt RS(Q) Q      &mt RS(W) W    &mt RS(E) E    &mt RS(R) R    &mt RS(T) T         &mt RS(Y) Y     &mt RS(U) U    &mt RS(I) I    &mt RS(O) O   &mt RS(P) P 
 			     &mt RS(A) A      &mt RS(S) S    &mt RS(D) D    &mt RS(F) F    &mt RS(G) G         &mt RS(H) H     &mt RS(J) J    &mt RS(K) K    &mt RS(L) L   &lt SYMBOLS RETURN 
 			     &mt RS(Z) Z      &mt RS(X) X    &mt RS(C) C    &mt RS(V) V    &mt RS(B) B         &mt RS(N) N     &mt RS(M) M    &comma_comma   &dot_dot      &lt WINDOW_MANAGER BSPC
-			     &sk LEFT_CONTROL &lt NUMBERS SPACE                                                &lt MOUSE SPACE &lt NAVIGATION PAUSE_BREAK
+			     &sk LEFT_CONTROL &lt NUMBERS SPACE                                                &lt MOUSE SPACE &lt NAVIGATION F13
 			   >;
 			 };
 			 
@@ -230,9 +231,9 @@ behaviors {
 
 			  Window_manager_layer {
 			    bindings = <
-			      &none                    &kp LA(RS(S))          &mt  LA(E)            &kp LA(RS(F))      &none                          &none                &kp LA(U)              &kp LA(I)                &kp LA(O)            &none
-			      &none                    &mwleft                &mt  LA(D)            &mwright           &none                          &none                &kp LA(J)              &kp LA(K)                &kp LA(L)            &none
-			      &none                    &none                  &none                 &none              &none                          &none                &none                  &none                    &none                &none	
+			      &none                    &none                  &mt LA(RS(E)) LA(E)    &none                 &none                          &none                &mt LA(RS(U)) LA(U)    &mt LA(RS(I)) LA(I)      &mt LA(RS(O)) LA(O)            &none
+			      &none                    &mt LA(RS(S)) LA(S)    &mt LA(RS(D)) LA(D)    &mt LA(RS(F)) LA(F)   &none                          &none                &mw1                   &mw2                     &mw3                  		  &none
+			      &none                    &none                  &none                  &none                 &none                          &none                &none                  &none                    &none                          &none	
 			      &none                    &none                                                                                              &none                &none 
 			    >;
 			 };
