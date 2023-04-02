@@ -33,40 +33,27 @@
  /* ================== MACROS =========================*/
 
 macros {
-  mw1: mw1 {
-    label = "mw1";
+  mwleft: mwleft {
+    label = "mwleft";
     compatible = "zmk,behavior-macro";
     #binding-cells = <0>;
     bindings
-        = <&kp LA(J)>
+        = <&kp LA(S)>
         , <&macro_wait_time 30>
         , <&kp F13>
         ;
     };
 
-  mw2: mw2 {
-    label = "mw2";
+  mwright: mwright {
+    label = "mwright";
     compatible = "zmk,behavior-macro";
     #binding-cells = <0>;
     bindings
-        = <&kp LA(K)>
+        = <&kp LA(F)>
         , <&macro_wait_time 30>
         , <&kp F13>
         ;
     };
-
-
-  mw3: mw3 {
-    label = "mw3";
-    compatible = "zmk,behavior-macro";
-    #binding-cells = <0>;
-    bindings
-        = <&kp LA(L)>
-        , <&macro_wait_time 30>
-        , <&kp F13>
-        ;
-    };
-
 
  };
 
@@ -231,9 +218,9 @@ behaviors {
 
 			  Window_manager_layer {
 			    bindings = <
-			      &none                    &none                  &mt LA(RS(E)) LA(E)    &none                 &none                          &none                &mt LA(RS(U)) LA(U)    &mt LA(RS(I)) LA(I)      &mt LA(RS(O)) LA(O)            &none
-			      &none                    &mt LA(RS(S)) LA(S)    &mt LA(RS(D)) LA(D)    &mt LA(RS(F)) LA(F)   &none                          &none                &mw1                   &mw2                     &mw3                  		  &none
-			      &none                    &none                  &none                  &none                 &none                          &none                &none                  &none                    &none                          &none	
+			      &none                    &kp LA(RS(S))          &mt  LA(E)            &kp LA(RS(F))      &none                          &none                &kp LA(U)              &kp LA(I)                &kp LA(O)            &none
+			      &none                    &mwleft                &mt  LA(D)            &mwright           &none                          &none                &kp LA(J)              &kp LA(K)                &kp LA(L)            &none
+			      &none                    &none                  &none                 &none              &none                          &none                &none                  &none                    &none                &none	
 			      &none                    &none                                                                                              &none                &none 
 			    >;
 			 };
