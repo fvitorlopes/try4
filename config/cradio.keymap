@@ -39,8 +39,8 @@ macros {
     #binding-cells = <0>;
     bindings
         = <&kp LA(J)>
-        , <&macro_wait_time 30>
-        , <&kp F13>
+        , <&macro_wait_time 50>
+        , <&kp F6>
         ;
     };
 
@@ -50,8 +50,8 @@ macros {
     #binding-cells = <0>;
     bindings
         = <&kp LA(K)>
-        , <&macro_wait_time 30>
-        , <&kp F13>
+        , <&macro_wait_time 50>
+        , <&kp F6>
         ;
     };
 
@@ -62,10 +62,34 @@ macros {
     #binding-cells = <0>;
     bindings
         = <&kp LA(L)>
-        , <&macro_wait_time 30>
+        , <&macro_wait_time 50>
+        , <&kp F6>
+        ;
+    };
+
+
+  mwleft: mwleft {
+    label = "mwleft";
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    bindings
+        = <&kp LA(S)>
+        , <&macro_wait_time 100>
         , <&kp F13>
         ;
     };
+
+  mwright: mwright {
+    label = "mwright";
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    bindings
+        = <&kp LA(F)>
+        , <&macro_wait_time 100>
+        , <&kp F13>
+        ;
+    };
+
 
 
  };
@@ -149,7 +173,7 @@ behaviors {
 			     &mt RS(Q) Q      &mt RS(W) W    &mt RS(E) E    &mt RS(R) R    &mt RS(T) T         &mt RS(Y) Y     &mt RS(U) U    &mt RS(I) I    &mt RS(O) O   &mt RS(P) P 
 			     &mt RS(A) A      &mt RS(S) S    &mt RS(D) D    &mt RS(F) F    &mt RS(G) G         &mt RS(H) H     &mt RS(J) J    &mt RS(K) K    &mt RS(L) L   &lt SYMBOLS RETURN 
 			     &mt RS(Z) Z      &mt RS(X) X    &mt RS(C) C    &mt RS(V) V    &mt RS(B) B         &mt RS(N) N     &mt RS(M) M    &comma_comma   &dot_dot      &lt WINDOW_MANAGER BSPC
-			     &sk LEFT_CONTROL &lt NUMBERS SPACE                                                &lt MOUSE SPACE &lt NAVIGATION F13
+			     &sk LEFT_CONTROL &lt NUMBERS SPACE                                                &lt MOUSE SPACE &lt NAVIGATION F6
 			   >;
 			 };
 			 
@@ -168,9 +192,9 @@ behaviors {
 			     &kp ESC        &mkp LCLK      &mmv MOVE_UP   &mkp RCLK       &none                    &none         &mwh SCROLL_UP     &kp F19           &mwh SCROLL_DOWN   &kp BSPC
 			     &kp TAB        &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &kp F15                  &none         &kp F16            &kp F17           &kp F18            &kp RETURN
 			     &kp LEFT_SHIFT &none          &kp LA(LEFT)   &kp LA(RIGHT)   &none                    &none         &kp LC(PAGE_UP)    &kp LC(PAGE_DOWN) &none              &kp BSPC
-			     &mkp RCLK &mkp LCLK                                                                   &none             &none 
+			     &mkp RCLK &mkp LCLK                                                                   &none         &none 
 			   >;
-			 };
+			 }; 
 
 			 /*                         NAVIGATION AND MODIFIERS
 			 ╭─────────────────────────────────────╮ ╭─────────────────────────────────────╮
@@ -231,9 +255,9 @@ behaviors {
 
 			  Window_manager_layer {
 			    bindings = <
-			      &none                    &none                  &mt LA(RS(E)) LA(E)    &none                 &none                          &none                &mt LA(RS(U)) LA(U)    &mt LA(RS(I)) LA(I)      &mt LA(RS(O)) LA(O)            &none
-			      &none                    &mt LA(RS(S)) LA(S)    &mt LA(RS(D)) LA(D)    &mt LA(RS(F)) LA(F)   &none                          &none                &mw1                   &mw2                     &mw3                  		  &none
-			      &none                    &none                  &none                  &none                 &none                          &none                &none                  &none                    &none                          &none	
+			      &none                    &kp LA(RS(S))      &kp LA(E)        &none LA(RS(F))       &none                          &none                &mt LA(RS(U)) LA(U)    &mt LA(RS(I)) LA(I)      &mt LA(RS(O)) LA(O)            &none
+			      &none                    &mwleft            &kp LA(D)        &mwright              &none                          &none                &mw1                   &mw2                     &mw3                  	       &none
+			      &none                    &none              &none            &none                 &none                          &none                &none                  &none                    &none                          &none	
 			      &none                    &none                                                                                              &none                &none 
 			    >;
 			 };
