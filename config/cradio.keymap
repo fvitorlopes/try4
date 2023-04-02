@@ -160,7 +160,7 @@ behaviors {
 		      Mouse_layer {
 			     bindings = <
 			     &kp ESC        &mkp LCLK      &mmv MOVE_UP   &mkp RCLK       &none                    &none         &mwh SCROLL_UP     &kp F19           &mwh SCROLL_DOWN   &kp BSPC
-			     &kp TAB        &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &kp F15                  &none         &kp F16            &kp F17           &kp F18            &kp RETURN
+			     &kp TAB        &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &kp LG(LS(S))            &none         &kp F16            &kp F17           &kp F18            &kp RETURN
 			     &kp LEFT_SHIFT &none          &kp LA(LEFT)   &kp LA(RIGHT)   &none                    &none         &kp LC(PAGE_UP)    &kp LC(PAGE_DOWN) &none              &kp BSPC
 			     &mkp RCLK &mkp LCLK                                                                   &none             &none 
 			   >;
