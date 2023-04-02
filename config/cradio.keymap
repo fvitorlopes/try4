@@ -41,6 +41,31 @@ macros {
         , <&kp F13>
         ;
     };
+
+  mw2: mw2 {
+    label = "mw2";
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    bindings
+        = <&kp LA(K)>
+        , <&macro_wait_time 30>
+        , <&kp F13>
+        ;
+    };
+
+
+  mw3: mw1 {
+    label = "mw3";
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    bindings
+        = <&kp LA(L)>
+        , <&macro_wait_time 30>
+        , <&kp F13>
+        ;
+    };
+
+
  };
 
 
