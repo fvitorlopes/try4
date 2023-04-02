@@ -148,7 +148,7 @@ behaviors {
 			   bindings = <
 			     &mt RS(Q) Q      &mt RS(W) W    &mt RS(E) E    &mt RS(R) R    &mt RS(T) T         &mt RS(Y) Y     &mt RS(U) U    &mt RS(I) I    &mt RS(O) O   &mt RS(P) P 
 			     &mt RS(A) A      &mt RS(S) S    &mt RS(D) D    &mt RS(F) F    &mt RS(G) G         &mt RS(H) H     &mt RS(J) J    &mt RS(K) K    &mt RS(L) L   &lt SYMBOLS RETURN 
-			     &mt RS(Z) Z      &mt RS(X) X    &mt RS(C) C    &mt RS(V) V    &mt RS(B) B         &mt RS(N) N     &mt RS(M) M    &comma_comma   &dot_dot      &kp LALT
+			     &mt RS(Z) Z      &mt RS(X) X    &mt RS(C) C    &mt RS(V) V    &mt RS(B) B         &mt RS(N) N     &mt RS(M) M    &comma_comma   &dot_dot      &lt WINDOW_MANAGER BSPC
 			     &sk LEFT_CONTROL &lt NUMBERS SPACE                                                &lt MOUSE SPACE &lt NAVIGATION F13
 			   >;
 			 };
@@ -167,7 +167,7 @@ behaviors {
 			     bindings = <
 			     &kp ESC        &mkp LCLK      &mmv MOVE_UP   &mkp RCLK       &none                    &none         &mwh SCROLL_UP     &kp F19           &mwh SCROLL_DOWN   &kp BSPC
 			     &kp TAB        &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &kp F15                  &none         &kp F16            &kp F17           &kp F18            &kp RETURN
-			     &kp LEFT_SHIFT &none          &kp LA(LEFT)   &kp LA(RIGHT)   &none                    &none         &kp LC(PAGE_UP)    &kp LC(PAGE_DOWN) &none              &kp LALT
+			     &kp LEFT_SHIFT &none          &kp LA(LEFT)   &kp LA(RIGHT)   &none                    &none         &kp LC(PAGE_UP)    &kp LC(PAGE_DOWN) &none              &kp BSPC
 			     &mkp RCLK &mkp LCLK                                                                   &none             &none 
 			   >;
 			 };
@@ -185,7 +185,7 @@ behaviors {
 			     bindings = <
 			       &kp ESC         &kp PAGE_DOWN &kp UP     &kp PAGE_UP  &none               &kp Y    &mwh SCROLL_UP       &mwh SCROLL_DOWN   &mwh SCROLL_DOWN   &kp BSPC
 			       &kp TAB         &kp LEFT      &kp DOWN   &kp RIGHT    &none               &none    &sk LEFT_SHIFT       &sk LEFT_CONTROL   &sk LALT           &kp RETURN
-			       &kp Z           &kp X         &kp C      &kp V        &none               &kp DEL  &kp INSERT           &none              &none              &kp LALT
+			       &kp Z           &kp X         &kp C      &kp V        &none               &kp DEL  &kp INSERT           &none              &none              &kp BSPC
 			       &kp LEFT_CONTROL &kp LEFT_GUI                                             &none    &none 
 			     >;
 			 };
@@ -221,18 +221,17 @@ behaviors {
 			  Numbers_layer {
 			    bindings = <
 			      &mt EXCLAMATION NUMBER_1  &mt AT_SIGN NUMBER_2  &mt HASH NUMBER_3      &mt DOLLAR NUMBER_4   &mt PERCENT NUMBER_5           &mt CARET NUMBER_6   &mt AMPERSAND NUMBER_7  &mt ASTERISK NUMBER_8   &mt LEFT_PARENTHESIS NUMBER_9  &mt RIGHT_PARENTHESIS NUMBER_0 
-			      &kp TAB                   &kp QMARK             &kp LC(SINGLE_QUOTE)   &sk LEFT_SHIFT        &kp SLASH                      &kp CAPS             &open_symbol            &close_symbol           &mt MINUS UNDER                &mt EQUAL PLUS 
-			      &kp F2                    &kp F3                &kp LA(F4)             &kp LC(F5)            &kp F6                         &kp F7               &kp F8                  &kp F9                  &kp F10                        &kp F11	
+			      &kp TAB                   &kp QMARK             &kp LC(SINGLE_QUOTE)   &sk LEFT_SHIFT        &kp SLASH                      &kp CAPS             &open_symbol            &close_symbol           &mt MINUS UNDER                &kp RETURN 
+			      &kp F2                    &kp F3                &kp LA(F4)             &kp LC(F5)            &kp F6                         &kp F7               &kp F8                  &kp F9                  &kp F10                        &kp BSPC	
 			      &none                     &none                                                                                             &none                &none 
 			    >;
 			 };
 
 
 
-
 			  Window_manager_layer {
 			    bindings = <
-			      &none                    &none                  &mt LA(RS(E)) LA(E)    &none                 &none                          &none                &none                  &none                    &none                          &none
+			      &none                    &none                  &mt LA(RS(E)) LA(E)    &none                 &none                          &none                &mt LA(RS(U)) LA(U)    &mt LA(RS(I)) LA(I)      &mt LA(RS(O)) LA(O)            &none
 			      &none                    &mt LA(RS(S)) LA(S)    &mt LA(RS(D)) LA(D)    &mt LA(RS(F)) LA(F)   &none                          &none                &mw1                   &mw2                     &mw3                  		  &none
 			      &none                    &none                  &none                  &none                 &none                          &none                &none                  &none                    &none                          &none	
 			      &none                    &none                                                                                              &none                &none 
