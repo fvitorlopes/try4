@@ -33,8 +33,8 @@
  /* ================== MACROS =========================*/
 
 macros {
-  mw1: mw1 {
-    label = "mw1";
+  mwleft: mwleft {
+    label = "mwleft";
     compatible = "zmk,behavior-macro";
     #binding-cells = <0>;
     bindings
@@ -44,8 +44,8 @@ macros {
         ;
     };
 
-  mw2: mw2 {
-    label = "mw2";
+  mwright: mwright {
+    label = "mwright";
     compatible = "zmk,behavior-macro";
     #binding-cells = <0>;
     bindings
@@ -54,19 +54,6 @@ macros {
         , <&kp F13>
         ;
     };
-
-
-  mw3: mw3 {
-    label = "mw3";
-    compatible = "zmk,behavior-macro";
-    #binding-cells = <0>;
-    bindings
-        = <&kp LA(L)>
-        , <&macro_wait_time 30>
-        , <&kp F13>
-        ;
-    };
-
 
  };
 
@@ -232,7 +219,7 @@ behaviors {
 			  Window_manager_layer {
 			    bindings = <
 			      &none                    &kp LA(RS(S))          &kp LA(E)             &kp LA(RS(F))         &none                          &none                &kp LA(U)              &kp LA(I)                &kp LA(O)            &none
-			      &none                    &kp LA(S)              &kp LA(D)             &kp LA(F)             &none                          &none                &kp LA(J)              &kp LA(K)                &kp LA(L)	           &none
+			      &none                    &mwleft                &kp LA(D)              &mwright             &none                          &none                &kp LA(J)              &kp LA(K)                &kp LA(L)	           &none
 			      &none                    &none                  &none                 &none                 &none                          &none                &none                  &none                    &none                &none	
 			      &none                    &none                                                                                             &none                &none 
 			    >;
