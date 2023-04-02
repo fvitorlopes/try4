@@ -40,10 +40,9 @@ macros {
     wait-ms = <10>;
 	       bindings
                 = <&macro_press &kp LALT>
-                , <&macro_tap &kp F>
+                , <&macro_tap &kp S>
                 , <&macro_release &kp LALT>
 		, <&macro_tap_time 100>
-		, <&macro_tap &kp F>
 		, <&macro_tap &kp PAUSE_BREAK>
                 ;
 
@@ -53,11 +52,14 @@ macros {
     label = "mwright";
     compatible = "zmk,behavior-macro";
     #binding-cells = <0>;
-    bindings
-        = <&kp LA(K)>
-        , <&macro_wait_time 30>
-        , <&kp F13>
-        ;
+    wait-ms = <10>;
+	       bindings
+                = <&macro_press &kp LALT>
+                , <&macro_tap &kp F>
+                , <&macro_release &kp LALT>
+		, <&macro_tap_time 100>
+		, <&macro_tap &kp PAUSE_BREAK>
+                ;
     };
 
  };
