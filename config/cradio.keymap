@@ -80,12 +80,17 @@ macros {
 */
 
 
-   combo_meh {
-     timeout-ms = <27>;
-     key-positions = <17 18>;
-     bindings = <&kp F14>;
+   combo_ble1 {
+     timeout-ms = <20>;
+     key-positions = <1 2>;
+     bindings = <&bt BT_SEL 1>;
    };
 
+ combo_ble2 {
+     timeout-ms = <20>;
+     key-positions = <1 2>;
+     bindings = <&bt BT_SEL 2>;
+   };
 
  };
 
