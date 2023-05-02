@@ -39,10 +39,10 @@ macros {
     #binding-cells = <0>;
     wait-ms = <10>;
 	       bindings
-                = <&macro_press &kp LALT>
+                = <&macro_press &kp LGUI>
                 , <&macro_tap &kp S>
-                , <&macro_release &kp LALT>
-		, <&macro_tap_time 70>
+                , <&macro_release &kp LGUI>
+		, <&macro_tap_time 40>
 		, <&macro_tap &kp PAUSE_BREAK>
                 ;
 
@@ -54,10 +54,10 @@ macros {
     #binding-cells = <0>;
     wait-ms = <10>;
 	       bindings
-                = <&macro_press &kp LALT>
+                = <&macro_press &kp LGUI>
                 , <&macro_tap &kp F>
-                , <&macro_release &kp LALT>
-		, <&macro_tap_time 70>
+                , <&macro_release &kp LGUI>
+		, <&macro_tap_time 40>
 		, <&macro_tap &kp PAUSE_BREAK>
                 ;
     };
@@ -230,8 +230,8 @@ behaviors {
 
 			  Window_manager_layer {
 			    bindings = <
-			      &none                    &kp LG(RS(S))          &kp LG(E)             &kp LG(RS(F))         &none                          &none                &kp LG(U)              &kp LG(I)                &kp LG(O)            &none
-			      &none                    &mwleft                &kp LG(D)             &mwright              &kp LG(G)                      &kp LG(H)            &kp LG(J)              &kp LG(K)                &kp LG(L)	           &none
+			      &none                    &kp LG(RS(S))          &kp RS(LG(E))         &kp LG(RS(F))         &none                          &none                &kp RS(LG(U))          &kp RS(LG(I))            &kp RS(LG(O))        &none
+			      &none                    &mwleft                &kp RS(LG(D))         &mwright              &kp RS(LG(G))                  &kp RS(LG(H))        &kp RS(LG(J))          &kp RS(LG(K))            &kp RS(LG(L))        &none
 			      &none                    &none                  &none                 &none                 &none                          &none                &none                  &none                    &none                &none	
 			      &none                    &none                                                                                             &none                &none 
 			    >;
