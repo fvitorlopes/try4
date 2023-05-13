@@ -12,6 +12,8 @@
 #define SYMBOLS 3
 #define NUMBERS 4
 #define WINDOW_MANAGER 5
+#define MODIFIERS 6
+
 
 
 &mmv {
@@ -183,7 +185,7 @@ behaviors {
 			   Navigation_layer {
 			     bindings = <
 			       &kp ESC         &kp PAGE_DOWN &kp UP     &kp PAGE_UP  &none               &kp Y    &mwh SCROLL_UP       &mwh SCROLL_DOWN   &mwh SCROLL_DOWN   &none
-			       &kp TAB         &kp LEFT      &kp DOWN   &kp RIGHT    &none               &none    &sk LEFT_SHIFT       &sk LEFT_CONTROL   &sk LALT           &kp RETURN
+			       &kp TAB         &kp LEFT      &kp DOWN   &kp RIGHT    &none               &none    &kp LEFT_SHIFT       &kp LEFT_CONTROL   &kp LALT           &kp RETURN
 			       &kp Z           &kp X         &kp C      &kp V        &none               &kp DEL  &kp INSERT           &none              &none              &kp BSPC
 			       &kp LEFT_CONTROL &kp LEFT_GUI                                             &none    &none 
 			     >;
@@ -232,6 +234,16 @@ behaviors {
 			    bindings = <
 			      &none                    &kp LG(RS(S))          &kp RS(LG(E))         &kp LG(RS(F))         &none                          &none                &kp RS(LG(U))          &kp RS(LG(I))            &kp RS(LG(O))        &none
 			      &none                    &mwleft                &kp RS(LG(D))         &mwright              &kp RS(LG(G))                  &kp RS(LG(H))        &kp RS(LG(J))          &kp RS(LG(K))            &kp RS(LG(L))        &none
+			      &none                    &none                  &none                 &none                 &none                          &none                &none                  &none                    &none                &none	
+			      &none                    &none                                                                                             &none                &none 
+			    >;
+			 };
+			 
+			 
+			 sticky_mocifier_layer {
+			    bindings = <
+			      &none                    &none                  &none                 &none                 &none                          &none                &none                  &none                    &none                &none
+			      &none                    &sk LALT               &sk LEFT_CONTROL      &sk LEFT_SHIFT        &sk LEFT_GUI                   &sk LEFT_GUI         &sk LEFT_SHIFT         &sk LEFT_CONTROL         &sk LALT                &none
 			      &none                    &none                  &none                 &none                 &none                          &none                &none                  &none                    &none                &none	
 			      &none                    &none                                                                                             &none                &none 
 			    >;
