@@ -101,7 +101,7 @@ behaviors {
      label = "TD_OPEN";
      #binding-cells = <0>;
      tapping-term-ms = <200>;
-     bindings = <&kp LEFT_BRACE>, <&kp LEFT_PARENTHESIS>, <&kp LEFT_BRACKET>, <&kp LT>;
+     bindings = <&kp RS(RIGHT_BRACKET)>, <&kp RS(NUMBER_9)>, <&kp RIGHT_BRACKET>, <&kp LT>;
    };
 
    close_symbol: td_close {
@@ -109,7 +109,7 @@ behaviors {
      label = "TD_CLOSE";
      #binding-cells = <0>;
      tapping-term-ms = <200>;
-     bindings = <&kp RIGHT_BRACE>, <&kp RIGHT_PARENTHESIS>, <&kp RIGHT_BRACKET>, <&kp GT>;
+     bindings = <&kp RS(BACKSLASH)>, <&kp RS(NUMBER_0)>, <&kp BACKSLASH>, <&kp GT>;
    };
 
    dot_dot: dot_dot {
