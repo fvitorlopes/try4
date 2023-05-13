@@ -117,7 +117,7 @@ behaviors {
      label = "DOT_DOT";
      #binding-cells = <0>;
      tapping-term-ms = <200>;
-     bindings = <&kp PERIOD>, <&kp COLON>;
+     bindings = <&kp PERIOD>, <&kp LS(SLASH)>;
   };
 
    comma_comma: comma_comma {
@@ -125,7 +125,7 @@ behaviors {
      label = "COMMA_COMMA";
      #binding-cells = <0>;
      tapping-term-ms = <200>;
-     bindings = <&kp COMMA>, <&kp SEMICOLON>;
+     bindings = <&kp COMMA>, <&kp SLASH>;
    };
 
  };
