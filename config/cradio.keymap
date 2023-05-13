@@ -201,10 +201,10 @@ behaviors {
 			
 			   Symbols_layer {
 			     bindings = <
-			       &kp ESC           &kp LEFT_BRACE  &kp GRAV        &kp SLASH   &none                    &kp BACKSLASH    &kp PIPE          &kp CARET          &none             &none   
-			       &kp TAB           &kp RA(W)                       &kp LC(SINGLE_QUOTE)  &kp SEMICOLON &kp SLASH                &kp PIPE         &mt MINUS UNDER   &mt EQUAL PLUS     &none             &kp RETURN     
-			       &sk LEFT_CONTROL  &none                           &none                 &none         &none                    &kp BACKSLASH    &kp LT            &kp GT             &none             &none
-			       &none             &none                                                                            &none            &none 
+			       &mt RS(TILDE) TILDE  &kp LEFT_BRACE       &kp GRAV              &kp SLASH      &none                    &kp BACKSLASH    &kp PIPE          &kp CARET          &none             &none   
+			       &kp TAB              &kp RA(W)            &kp LC(SINGLE_QUOTE)  &kp SEMICOLON  &kp SLASH                &kp PIPE         &mt MINUS UNDER   &mt EQUAL PLUS     &none             &kp RETURN     
+			       &sk LEFT_CONTROL     &none                &none                 &none          &none                    &kp BACKSLASH    &kp LT            &kp GT             &none             &none
+			       &none                &none                                                                              &none            &none 
 			    >;
 			 };
 
@@ -220,7 +220,7 @@ behaviors {
 			  Numbers_layer {
 			    bindings = <
 			      &mt EXCLAMATION NUMBER_1  &mt AT_SIGN NUMBER_2  &mt HASH NUMBER_3      &mt DOLLAR NUMBER_4   &mt PERCENT NUMBER_5           &mt CARET NUMBER_6   &mt AMPERSAND NUMBER_7  &mt ASTERISK NUMBER_8   &mt LEFT_PARENTHESIS NUMBER_9  &mt RIGHT_PARENTHESIS NUMBER_0 
-			      &kp TAB                   &kp RA(W)          &kp LC(SINGLE_QUOTE)   &sk LEFT_SHIFT        &kp SLASH                      &kp CAPS             &open_symbol            &close_symbol           &mt MINUS UNDER                &kp RETURN 
+			      &kp TAB                   &kp RA(W)             &kp LC(SINGLE_QUOTE)   &sk LEFT_SHIFT        &kp SLASH                      &kp CAPS             &open_symbol            &close_symbol           &mt MINUS UNDER                &kp RETURN 
 			      &kp F2                    &kp F3                &kp LA(F4)             &kp LC(F5)            &kp F6                         &kp F7               &kp F8                  &kp F9                  &kp F10                        &kp BSPC	
 			      &none                     &none                                                                                             &none                &none 
 			    >;
