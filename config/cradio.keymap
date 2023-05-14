@@ -74,8 +74,8 @@ macros {
  
  /* 
    ╭───────────────────────╮ ╭───────────────────────╮
-   │   .   .   .   .   .   │ │   .   .   .   .   .   │
-   │   .   .   .   .   .   │ │   .   .   [MEH]   .   │
+   │   0   1   2   3   4   │ │   5   6   7   8   9   │
+   │   10  11  12  13  14  │ │   15  16  17  18  19  │
    │   .   .   .   .   .   │ │   .   .   .   .   .   │
    ╰───────────╮   .   .   │ │   .   .   ╭───────────╯
                ╰───────────╯ ╰───────────╯
@@ -84,15 +84,23 @@ macros {
 
    combo_ble1 {
      timeout-ms = <20>;
-     key-positions = <1 2>;
+     key-positions = <0 1>;
      bindings = <&bt BT_SEL 1>;
    };
 
- combo_ble2 {
+ 
+  combo_ble2 {
      timeout-ms = <20>;
      key-positions = <1 2>;
      bindings = <&bt BT_SEL 2>;
    };
+
+ combo_tab {
+     timeout-ms = <20>;
+     key-positions = <12 13>;
+     bindings = <&kp TAB>;
+   };
+
 
  };
 
@@ -222,7 +230,7 @@ behaviors {
 			  Numbers_layer {
 			    bindings = <
 			      &mt EXCLAMATION NUMBER_1  &mt AT_SIGN NUMBER_2  &mt HASH NUMBER_3      &mt DOLLAR NUMBER_4   &mt PERCENT NUMBER_5           &mt CARET NUMBER_6   &mt AMPERSAND NUMBER_7  &mt ASTERISK NUMBER_8   &mt LEFT_PARENTHESIS NUMBER_9  &mt RIGHT_PARENTHESIS NUMBER_0 
-			      &kp TAB                   &kp RA(W)             &kp LS(LEFT_BRACKET)   &sk LEFT_SHIFT        &kp SLASH                      &kp CAPS             &open_symbol            &close_symbol           &mt MINUS UNDER                &kp RETURN 
+			      &kp SINGLE_QUOTE          &kp RA(W)             &kp LS(LEFT_BRACKET)   &sk LEFT_SHIFT        &kp SLASH                      &kp CAPS             &open_symbol            &close_symbol           &mt MINUS UNDER                &kp RETURN 
 			      &kp F2                    &kp F3                &kp LA(F4)             &kp LC(F5)            &kp F6                         &kp F7               &kp F8                  &kp F9                  &kp F10                        &kp BSPC	
 			      &kp F1                    &none                                                                                             &kp F11              &kp F12 
 			    >;
