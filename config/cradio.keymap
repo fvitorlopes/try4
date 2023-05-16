@@ -102,6 +102,21 @@ macros {
    };
 
 
+
+  combo_back_tab {
+     timeout-ms = <20>;
+     key-positions = <12 13>;
+     bindings = <&kp RS(TAB)>;
+   };
+
+
+  combo_enter {
+     timeout-ms = <20>;
+     key-positions = <12 13>;
+     bindings = <&kp RETURN>;
+   };
+
+
  };
 
 behaviors {
